@@ -1,0 +1,150 @@
+/* Шрифт по умолчанию */
+@font-face {
+    font-family: Verdana; /* Имя шрифта */
+    src: url("../fonts/Verdana.ttf") format("truetype");     /* адрес шрифта и тип */
+    font-style: normal; 
+    font-weight: 400; 
+    }
+
+.logo-index {
+    position: absolute;
+    width: 414px;
+    height: 122px;
+    left: calc(50% - 414px/2);
+    top: 66px;
+    background: url("img/logo.png");
+}
+
+.dropbtn {
+    position: absolute;
+    width: 116px;
+    height: 47px;
+    left: 436px;
+    top: 7px;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    
+    /* Text */
+    color: #919191;
+    background-color: black;
+    border: none;
+}
+
+h1.head {
+    position: absolute;
+    width: 414px;
+    height: 60px;
+    left: calc(50% - 414px/2);
+    top: 290px;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: var(--font-weight);
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.145em;
+    text-transform: uppercase;
+    color: #1C8550;
+
+    }
+
+.border-index {
+    box-sizing: border-box;
+    position: absolute;
+    width: 630px;
+    height: 68px;
+    left: calc(50% - 630px/2);
+    top: 379px;
+    background: #FFF;
+    border: 3px solid rgb(0 0 0 / 43%);
+    border-radius: 40px;
+    }
+
+.input-field {
+    padding: 0;
+    text-align:left;  
+    position: absolute;
+    width: 393px;
+    height: 22px;
+    left: 32px;
+    top: 21px;
+    bottom: 25px;
+    border: none;
+    }
+
+::placeholder {
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: var(--font-weight);
+    font-size: 18px;
+    line-height: 22px;
+    color: #D8D8D8;
+    }
+
+.btn-form-index {
+    position: absolute;
+    width: 630px;
+    height: 66px;
+    left: calc(50% - 630px/2);
+    top: 481px;
+
+}
+
+.btn-index-type {
+    box-sizing: border-box;
+    position: absolute;
+    width: 110px;
+    height: 28px;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    border: 1px solid #C5C9C6;
+    border-radius: 40px;
+    background: none;
+}
+
+.btn-index-type:hover {
+    background-color: #C5C9C6;
+
+}
+
+.btn1-index {
+    left: calc(50% - 110px/2 - 241px);
+    top: 0;
+}
+
+.btn2-index {
+    left: calc(50% - 110px/2 - 121px);
+    top: 0;
+}
+
+.btn3-index {
+    left: calc(50% - 110px/2);
+    top: 0;
+}
+
+.btn4-index {
+    left: calc(50% - 110px/2 + 120px);
+    top: 0;
+}
+
+.btn5-index {
+    left: calc(50% - 110px/2 + 240px);
+    top: 0;
+}
+
+.btn6-index {
+    left: calc(50% - 110px/2 - 60px);
+    top: 38px;
+}
+
+.btn7-index {
+    left: calc(50% - 110px/2 + 60px);
+    top: 38px;
+}
