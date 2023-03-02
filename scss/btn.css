@@ -1,0 +1,160 @@
+/* Шрифт по умолчанию */
+@font-face {
+    font-family: Verdana; /* Имя шрифта */
+    src: url("../fonts/Verdana.ttf") format("truetype");     /* адрес шрифта и тип */
+    font-style: normal; 
+    font-weight: 400; 
+    }
+
+.drop-btn {
+    position: absolute;
+    width: 116px;
+    height: 47px;
+    left: 436px;
+    top: 7px;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    
+    /* Text */
+    color: #919191;
+    background-color: white;
+    border: none;
+}
+
+.search-btn {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right:7px;
+    top: 7px;
+    
+    font-family: Verdana, sans-serif;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+
+    border-radius: 50%;
+    border: none;
+    background: #F05A21;
+}
+
+.search-btn:hover {
+    background: #E3551E;
+}
+
+.btn-form-index {
+    position: absolute;
+    width: 630px;
+    height: 66px;
+    left: calc(50% - 630px/2);
+    top: 481px;
+
+}
+
+.btn-index-type {
+    box-sizing: border-box;
+    position: absolute;
+    width: 110px;
+    height: 28px;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    border: 1px solid #C5C9C6;
+    border-radius: 40px;
+    background: none;
+}
+
+.btn-index-type:hover {
+    background-color: #C5C9C6;
+
+}
+
+.btn1-index {
+    left: calc(50% - 110px/2 - 241px);
+    top: 0;
+}
+
+.btn2-index {
+    left: calc(50% - 110px/2 - 121px);
+    top: 0;
+}
+
+.btn3-index {
+    left: calc(50% - 110px/2);
+    top: 0;
+}
+
+.btn4-index {
+    left: calc(50% - 110px/2 + 120px);
+    top: 0;
+}
+
+.btn5-index {
+    left: calc(50% - 110px/2 + 240px);
+    top: 0;
+}
+
+.btn6-index {
+    left: calc(50% - 110px/2 - 60px);
+    top: 38px;
+}
+
+.btn7-index {
+    left: calc(50% - 110px/2 + 60px);
+    top: 38px;
+}
+
+.admin-add-btn {
+    position: absolute;
+    width: 196px;
+    height: 42px;
+    left: calc(50% - 196px/2);
+    top: 625px;
+    
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+
+    border: none;
+    background: #F15A22;
+    border-radius: 40px;
+
+}
+
+.admin-add-btn:hover {
+    background: #E3551E;
+}
+
+.login-btn {
+    position: absolute;
+width: 150px;
+height: 42px;
+left: calc(50% - 150px/2);
+top: 495px;
+
+font-family: Verdana, sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+text-align: center;
+color: white;
+
+background: #1D8650;
+border-radius: 40px;
+border: none;
+}
+
+.login-btn:hover {
+    background: #176B40;
+}
