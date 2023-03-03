@@ -5,9 +5,11 @@
     font-style: normal; 
     font-weight: 400; 
     }
+
 .admin {
     background-color: #F8F4F4;
 }
+
 .logo-index {
     position: absolute;
     width: 414px;
@@ -15,6 +17,15 @@
     left: calc(50% - 414px/2);
     top: 66px;
     background: url("img/logo.png");
+}
+
+.logo-header {
+    position: absolute;
+    width: 305px;
+    height: 90px;
+    left: calc(50% - 305px/2 - 390.5px);
+    top: 0px;
+
 }
 
 h1.head {
@@ -25,7 +36,7 @@ h1.head {
     top: 290px;
     font-family: Verdana, sans-serif;
     font-style: normal;
-    font-weight: var(--font-weight);
+    font-weight: 400;
     font-size: 24px;
     line-height: 29px;
     text-align: center;
@@ -35,17 +46,23 @@ h1.head {
 
     }
 
-.border-index {
-    box-sizing: border-box;
+h1.result {
     position: absolute;
-    width: 630px;
-    height: 68px;
-    left: calc(50% - 630px/2);
-    top: 379px;
-    background: #FFF;
-    border: 3px solid rgb(0 0 0 / 43%);
-    border-radius: 40px;
-    }
+    width: 1068px;
+    height: 71px;
+    left: calc(50% - 1068px/2 + 2px);
+    top: 247px;
+
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.145em;
+    text-align: left;
+
+    color: #1D8650;
+}
 
 input.search {
     padding: 0;
@@ -56,28 +73,16 @@ input.search {
     left: 32px;
     top: 21px;
     bottom: 25px;
-
     font-family: Verdana, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     color: black;
-
     border: none;
     }
 
-::placeholder {
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: var(--font-weight);
-    font-size: 18px;
-    line-height: 22px;
-    color: #D8D8D8;
-    }
-
-    
-.input-login {
+input.login {
     padding: 0;
     text-align:left;  
     position: absolute;
@@ -92,32 +97,37 @@ input.search {
     line-height: 22px;
     color: black;
     border: none;
-
-}
-.login-form {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 414px;
-    height: 68px;
-    left: calc(50% - 414px/2);
-    top: 316px;
-
-    background: #FFFFFF;
-    border: 3px solid rgba(0, 0, 0, 0.43);
-    border-radius: 40px;
 }
 
-.pass-form {
-    box-sizing: border-box;
+::placeholder {
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #D8D8D8;
+    }
 
-position: absolute;
-width: 414px;
-height: 68px;
-left: calc(50% - 414px/2);
-top: 394px;
+h2.title {
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.145em;
+    text-indent: 12px;
 
-background: #FFFFFF;
-border: 3px solid rgba(0, 0, 0, 0.43);
-border-radius: 40px;
+    color: #919191;
+
 }
+
+h3.result {
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-indent: 12px;
+
+    color: #343434;
+    }

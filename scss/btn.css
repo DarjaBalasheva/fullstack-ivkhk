@@ -31,14 +31,12 @@
     height: 48px;
     right:7px;
     top: 7px;
-    
     font-family: Verdana, sans-serif;
     color: white;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 22px;
-
     border-radius: 50%;
     border: none;
     background: #F05A21;
@@ -48,14 +46,7 @@
     background: #E3551E;
 }
 
-.btn-form-index {
-    position: absolute;
-    width: 630px;
-    height: 66px;
-    left: calc(50% - 630px/2);
-    top: 481px;
 
-}
 
 .btn-index-type {
     box-sizing: border-box;
@@ -112,28 +103,35 @@
     top: 38px;
 }
 
-.admin-add-btn {
+.add-btn {
     position: absolute;
     width: 196px;
     height: 42px;
-    left: calc(50% - 196px/2);
-    top: 625px;
-    
+
     font-family: Verdana, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     text-align: center;
     color: white;
-
     border: none;
     background: #F15A22;
     border-radius: 40px;
 
 }
 
-.admin-add-btn:hover {
+.add-btn:hover {
     background: #E3551E;
+}
+
+.add-btn-index {
+    left: calc(50% - 196px/2);
+    top: 625px;
+}
+
+.add-btn-result {
+    left: calc(50% - 196px/2 + 434px);
+    top: 205px;
 }
 
 .login-btn {
@@ -142,14 +140,12 @@ width: 150px;
 height: 42px;
 left: calc(50% - 150px/2);
 top: 495px;
-
 font-family: Verdana, sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
 text-align: center;
 color: white;
-
 background: #1D8650;
 border-radius: 40px;
 border: none;
