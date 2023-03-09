@@ -9,7 +9,6 @@
   font-style: normal;
   font-display: block;
 }
-
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -28,18 +27,10 @@
 .icon-plus:before {
   content: "\e900";
 
-  position: absolute;
-  size: 24px;
-
 }
 
 .icon-angle-down:before {
   content: "\e901";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 10px;
-  top: 15px;
 }
 .icon-search:before {
   content: "\e902";
