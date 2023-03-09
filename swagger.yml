@@ -1,0 +1,91 @@
+---
+openapi: 3.0.0
+info: 
+  version: 2.22.0
+  title:
+    Flask_form
+paths: 
+  '/':
+
+    get:
+      tags:
+        - Index Page
+      description: Главная страница
+    post:
+      tags:
+        - Index Page
+      description: Поиск работ
+
+
+
+
+  '/admin':
+    
+    get:
+      tags:
+        - Index Page
+      description: Главная страница админа 
+    post:
+      tags:
+        - Index Page
+      description: Поиск работ
+
+  '/admin/login':
+    
+    get:
+      tags:
+        - Login
+      description: Страница входа
+    post:
+      tags:
+        - Login
+      description: Авторизация
+
+  '/result':
+    
+    get:
+      tags:
+        - Result
+      description: Cтраница результатов
+
+  '/admin/result':
+    
+    get:
+      tags:
+        - Result
+      description: Cтраница результатов
+
+  '/project':
+    
+    get:
+      tags:
+        - Project
+      description: Страница проекта
+
+  '/admin/project':
+    
+    get:
+      tags:
+        - Project
+      description: Страница проекта
+
+  '/admin/add':
+    
+    get:
+      tags:
+        - Project
+      description: Страница добавления проекта
+
+  '/admin/edit':
+    
+    get:
+      tags:
+        - Project
+      description: Страница редактирования проекта
+
+  '/admin/delete':
+    
+    get:
+      tags:
+        - Project
+      description: Страница удаления проекта

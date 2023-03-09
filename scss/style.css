@@ -24,11 +24,11 @@
     width: 305px;
     height: 90px;
     left: calc(50% - 305px/2 - 390.5px);
-    top: 0px;
+    top: 0;
 
 }
 
-h1.head {
+h1.index {
     position: absolute;
     width: 414px;
     height: 60px;
@@ -46,13 +46,12 @@ h1.head {
 
     }
 
-h1.result {
+h1.header {
     position: absolute;
     width: 1068px;
     height: 71px;
     left: calc(50% - 1068px/2 + 2px);
     top: 247px;
-
     font-family: Verdana, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -60,7 +59,6 @@ h1.result {
     line-height: 29px;
     letter-spacing: 0.145em;
     text-align: left;
-
     color: #1D8650;
 }
 
@@ -82,7 +80,7 @@ input.search {
     border: none;
     }
 
-input.login {
+input.login-pass {
     padding: 0;
     text-align:left;  
     position: absolute;
@@ -97,6 +95,27 @@ input.login {
     line-height: 22px;
     color: black;
     border: none;
+}
+
+input.add-project {
+    position: absolute;
+    width: 376px;
+    height: 21px;
+    left: 18px;
+    bottom: 11px;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    border: none;
+
+}
+
+input:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 ::placeholder {
@@ -116,7 +135,6 @@ h2.title {
     line-height: 15px;
     letter-spacing: 0.145em;
     text-indent: 12px;
-
     color: #919191;
 
 }
@@ -128,6 +146,27 @@ h3.result {
     font-size: 18px;
     line-height: 22px;
     text-indent: 12px;
-
     color: #343434;
     }
+
+h2.column {
+    width: 204px;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    color: #343434;
+}
+
+h2.text {
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 0%;
+    color: #F15A22;
+}

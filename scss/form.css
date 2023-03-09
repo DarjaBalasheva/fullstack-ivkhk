@@ -5,6 +5,7 @@
     left: calc(50% - 1064px/2);
     top: 69px;
 }
+
 .form-search-index {
     box-sizing: border-box;
     position: absolute;
@@ -24,11 +25,24 @@
     height: 68px;
     left: calc(50% - 629px/2 + 217.5px);
     top: 19px;
-
-    background: #FFFFFF;
-    border: 3px solid rgba(0, 0, 0, 0.43);
+    background: #FFF;
+    border: 3px solid rgb(0 0 0 / 43%);
     border-radius: 40px;
 }
+
+form.input-add-project {
+    position: absolute;
+    width: 412px;
+    height: 45px;
+    background: #FFF;
+    border-radius: 40px;
+}
+
+form.input-add-project{
+    top: 0;
+    right: 0;
+}
+
 
 .form-btn-type {
     position: absolute;
@@ -78,7 +92,6 @@ div.string {
     height: 48px;
     left: calc(50% - 1064px/2);
     top: 384px;
-
     background: #FFFEFB;
 }
 
@@ -93,6 +106,7 @@ div.nimi {
 
 
 }
+
 div.group {
     position: absolute;
     height: 48px;
@@ -104,6 +118,7 @@ div.group {
 
 
 }
+
 div.project {
     position: absolute;
     height: 48px;
@@ -133,6 +148,91 @@ div.box {
     left: calc(50% - 5px/2 + 529.5px);
     top: 0%;
     bottom: 0%;
-
 background: #F05A21;
+}
+
+div.add-project-form {
+    position: absolute;
+    width: 629px;
+    height: 45px;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+div.add-project-form.name {
+    top: 0;
+}
+
+div.add-project-form.group {
+    top: 56px;
+}
+
+div.add-project-form.project {
+    top: 110px;
+}
+
+div.add-project-form.type {
+    top: 165px;
+}
+
+div.add-project-form.year {
+    top: 220px;
+}
+
+div.add-project-background {
+    position: absolute;
+    width: 1064px;
+    height: 265px;
+    left: calc(50% - 1068px/2 + 2px);
+    top: 356px;
+
+}
+
+form.icon-plus-form{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 10px;
+    top: 6px;
+    border-color: #F05A21;
+}
+
+div.delete-form {
+    position: absolute;
+    width: 1064px;
+    height: 185px;
+    left: calc(50% - 1064px/2);
+    top: 341px;
+
+
+}
+
+div.text-form {
+    position: absolute;
+    width: 414px;
+    height: 24px;
+    left: 0;
+    top: 0;
+}
+
+div.confirm-pass-form {
+    box-sizing: border-box;
+    position: absolute;
+    width: 414px;
+    height: 68px;
+    left: calc(50% - 414px/2 - 325px);
+    top: 45px;
+    background: #FFF;
+    border: 3px solid rgb(0 0 0 / 43%);
+    border-radius: 40px;
+}
+
+div.content-form {
+    position: absolute;
+    width: 150px;
+    height: 185px;
+    left: 914px;
+    top: 0;
+    background-color: #F05A21;
 }

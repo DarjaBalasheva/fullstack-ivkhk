@@ -107,7 +107,6 @@
     position: absolute;
     width: 196px;
     height: 42px;
-
     font-family: Verdana, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -151,6 +150,149 @@ border-radius: 40px;
 border: none;
 }
 
+button.save-project:hover {
+    background: #176B40;
+}
+
 .login-btn:hover {
     background: #176B40;
+}
+
+button.add-project-file {
+    box-sizing: border-box;
+    position: absolute;
+    width: 355px;
+    height: 28px;
+    right: 0;
+    border: 1px solid #919191;
+    background-color: #F8F4F4;
+    border-radius: 40px;
+}
+
+button.add-project-file.btn1 {
+    top: 0;
+}
+
+button.add-project-file.btn2 {
+    top: 38px;
+}
+
+button.save-project{
+    position: absolute;
+    width: 150px;
+    height: 42px;
+    right:0;
+    bottom: 0;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background: #1C8550;
+    border-radius: 40px;
+    border: none;
+}
+
+button.save-project-and-create-new{
+    position: absolute;
+    width: 195px;
+    height: 42px;
+    left: calc(50% - 195px/2 + 274.5px);
+    bottom: 0;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background: #919191;
+    border-radius: 40px;
+    border: none;
+}
+
+button.save-project-and-create-new:hover{
+    background: #6F6F6F;
+}
+
+button.delete-project {
+    position: absolute;
+    width: 193px;
+    height: 42px;
+    left: calc(50% - 193px/2 - 325.5px);
+    top: 143px;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background: #F15A22;
+    border-radius: 40px;
+    border: none;
+}
+
+button.nimi.delete-page {
+    position: absolute;
+    width: 206px;
+    height: 23px;
+    left: calc(50% - 206px/2 + 212px);
+    top: 0;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: right;
+    color: #343434;
+    background-color:  #F8F4F4;
+    border: none;
+}
+
+button.year.delete-page {
+    position: absolute;
+    left: 65.41%;
+    right: 20.39%;
+    top: 12.43%;
+    bottom: 78.38%;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    text-align: right;
+    color: #343434;
+    background-color:  #F8F4F4;
+    border: none;
+}
+
+button.project.delete-page {
+    position: absolute;
+    left: 49.15%;
+    right: 20.39%;
+    top: 31.89%;
+    bottom: 51.89%;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: right;
+    color: #343434;
+    letter-spacing: 0.145em;
+    background-color:  #F8F4F4;
+    border: none;
+}
+
+button.type-delete-page {
+    position: absolute;
+    left: 65.41%;
+    right: 20.39%;
+    top: 48.11%;
+    bottom: 42.16%;
+    font-family: Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    text-align: right;
+    color: #343434;
+    background-color:  #F8F4F4;
+    border: none;
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head lang="et">
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link href="scss/style.css" rel="stylesheet" type="text/css">
+    <link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css">
+    <link href="scss/btn.css" rel="stylesheet" type="text/css">
+    <link href="scss/form.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="admin">
+    <header class="head-form">
+        <img class="logo-header" src="img/logo.png" alt="logo">
+
+        <form class="form-search-header">
+            <div>
+                <input class="search" type="text" id="input" name="message"
+                    placeholder="õpilase nimi / rühm / lõputööde pealkiri">
+            </div>
+            <button class="drop-btn"><i class="icon-angle-down"></i>proectid</button>
+            <button class="search-btn"><i class="icon-search"></i></button>
+      </form>
+    </header>
+    <h1 class="header">Uus lõputööde pealkiri</h1>
+
+    <div class="add-project-background">
+      <div class="add-project-form name">
+          <h2 class="column">Eesnimi Perekonanimi</h2>
+          <form class="input-add-project">
+              <input class="add-project" type="text" id="input-name" name="name">
+          </form>
+      </div>
+
+      <div class="add-project-form group">
+        <h2 class="column">Grupp</h2>
+        <form class="input-add-project">
+          <input class="add-project" type="text" id="input-group" name="group">
+        </form>
+      </div>
+
+      <div class="add-project-form project">
+        <h2 class="column">Lõpotööd Nimi</h2>
+        <form class="input-add-project">
+          <input class="add-project" type="text" id="input-project" name="project">
+        </form>
+      </div>
+
+      <div class="add-project-form type">
+        <h2 class="column">Tüüp</h2>
+        <form class="input-add-project">
+          <input class="add-project" type="text" id="input-type" name="type">
+        </form>
+      </div>
+
+      <div class="add-project-form year">
+        <h2 class="column">Aastad</h2>
+        <form class="input-add-project">
+          <input class="add-project" type="text" id="input-year" name="year">
+        </form>
+      </div>
+
+      <button class="add-project-file btn1" type="button" onclick="alert('Choose file')"></button>
+      <button class="add-project-file btn2" type="button" onclick="alert('Choose file')"></button>
+
+      <button class="save-project" type="button" onclick="alert('Project Save')">Add project</button>
+      <button class="save-project-and-create-new" type="button" onclick="alert('Project saved, and new created')">Add and create new</button>
+      
+  </div>
+  </body>
+
+</html>
