@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head lang="et">
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link href="../static/scss/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/fonts/icomoon/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/scss/btn.css" rel="stylesheet" type="text/css">
+    <link href="../static/scss/form.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="admin">
+    <header class="head-form">
+        <img class="logo-header" src="../static/img/logo.png" alt="logo">
+
+        <form class="form-search-header">
+            <div>
+                <input class="search" type="text" id="input" name="message"
+                    placeholder="õpilase nimi / rühm / lõputööde pealkiri">
+            </div>
+            <button class="drop-btn"><i class="icon-angle-down"></i>proectid</button>
+            <button class="search-btn"><i class="icon-search"></i></button>
+      </form>
+    </header>
+    <div class="project-form">
+
+        <button class="nimi project-page admin" type="button" onclick="alert('result nimi')">Roman Revin</button>
+        <button class="year project-page admin" type="button" onclick="alert('result year')">2021  ·  NKMMp21</button>
+        <button class="project project-page admin" type="button" onclick="alert('project file')">Minu project</button>
+        <button class="type project-page admin" type="button" onclick="alert('type result')">Helindamine</button>
+
+        <div class="content-form project-page"></div>
+
+        <button class="edit" type="button">Edit</button>
+        <button class="remove" type="button">Remove</button>
+
+
+    </div>
+  </body>
+</html>
