@@ -1,10 +1,12 @@
 from typing import Union
 
 from data import students_dict
+
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+
 from functions import find_everyone, find_all
 
 
