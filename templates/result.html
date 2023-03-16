@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head lang="et">
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link href="../static/scss/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/fonts/icomoon/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/scss/btn.css" rel="stylesheet" type="text/css">
+    <link href="../static/scss/form.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="head-form">
+        <img class="logo-header" src="static/img/logo.png" alt="logo">
+
+        <form class="form-search-header">
+            <div>
+                <input class="search" type="text" id="input" name="message"
+                    placeholder="õpilase nimi / rühm / lõputööde pealkiri">
+            </div>
+            <button class="drop-btn"><i class="icon-angle-down"></i> proectid</button>
+            <button class="search-btn"><i class="icon-search"></i></button>
+      </form>
+    </header>
+    <h1 class="header">Resultaat</h1> 
+    <div class="title">
+        <div class="nimi">
+            <h2 class="title">name</h2>
+        </div>
+        <div class="group">
+            <h2 class="title">group</h2>
+        </div>
+        <div class="project">
+            <h2 class="title">Lõpotööd Nimi</h2>
+        </div>
+        <div class="type">
+            <h2 class="title">Tüüp</h2>
+        </div>
+    </div>
+    
+    {% for result in results %}
+
+        <div class="string">
+            <div class="nimi">
+                <h3 class="result"><a href="{{server}}/result?message={{result.name}}">{{result.name}}</a></h3>
+            </div>
+            <div class="group">
+                <h3 class="result"><a href="{{server}}/result?message={{result.group}}">{{result.group}}</a></h3>
+            </div>
+            <div class="project">
+                <h3 class="result">{{result.project}}</h3>
+            </div>
+            <div class="type">
+                <h3 class="result">{{result.typeproject}}</h3>
+            </div>
+            <div class="box"></div>
+        </div>
+
+
+    {% endfor %}
+  </body>
+
+</html>
