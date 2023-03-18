@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Verdana; /* Имя шрифта */
+    src: url("../fonts/Verdana.ttf") format("truetype");     /* адрес шрифта и тип */
+    font-style: normal; 
+    font-weight: 400;
+    }
+
+:root {
+
+    --color-background-admin: #F8F4F4;
+     /* фирменные цвета*/
+     --color-primary-first: #F15A22; 
+     --color-primary-second: #1C8550;
+    
+     /* text */
+    
+    --color-text: #343434;
+    --color-text-input: black;
+
+    --font-primary:  Verdana, sans-serif;
+    --font-style-primary : normal;
+    --font-weight-primary: 400;
+    --font-size-primary: 24px;
+    --font-size-second: 18px;
+    --font-size-third: 16px;
+
+    --letter-spacing-primary: 0.145em;
+
+    /* form */
+    --color-border-grey: 3px solid rgb(0 0 0 / 43%);
+    --border-radius-primary: 40px;
+    --background-form-user: #FFF;
+
+    /* button */
+    --color-button-typeproject: #C5C9C6;
+    --color-button-hover-first: #C0491D;
+    --color-button-hover-second: #176B40;
+;
+
+}

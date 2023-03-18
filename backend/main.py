@@ -1,13 +1,13 @@
 from typing import Union
 
-from data import students_dict
+from data import students_dict, domen
 
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from functions import find_everyone, find_all
+from functions import find_everyone, find_all, find_item, find_project
 
 
 app = FastAPI()
@@ -29,5 +29,26 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
         result = find_all(students_dict)["data"]
     return templates.TemplateResponse(
         "result.html",
-        {"request": request, "server": "http://127.0.0.1:8000", "results": result},
+        {
+            "request": request,
+            "server": domen,
+            "results": result,
+            "caption": "Resultaat",
+            "title": "Result",
+        },
     )
+
+
+@app.get("/project", response_class=HTMLResponse)
+async def project_page(
+    request: Request,
+    project: Union[str, None] = Query(default=None),
+    uuid: Union[str, None] = Query(default=None),
+):
+    if project and uuid:
+        result = find_project(students_dict, uuid)
+        return templates.TemplateResponse(
+            "project.html",
+            {"request": request, "result": result, "title": "Project page"},
+        )
+    return 404

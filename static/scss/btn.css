@@ -1,10 +1,5 @@
 /* Шрифт по умолчанию */
-@font-face {
-    font-family: Verdana; /* Имя шрифта */
-    src: url("../fonts/Verdana.ttf") format("truetype");     /* адрес шрифта и тип */
-    font-style: normal; 
-    font-weight: 400; 
-    }
+@import url(variable.css);
 
 .drop-btn {
     position: absolute;
@@ -12,16 +7,20 @@
     height: 47px;
     left: 436px;
     top: 7px;
-    font-family: Verdana, sans-serif;
+
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-second);
+
     line-height: 22px;
     text-align: right;
     
     /* Text */
     color: #919191;
-    background-color: white;
+
+    background-color: var(--background-form-user);
+
     border: none;
 }
 
@@ -31,19 +30,21 @@
     height: 48px;
     right:7px;
     top: 7px;
-    font-family: Verdana, sans-serif;
-    color: white;
+
+    font-family: var(--font-primary);
+    color: var(--background-form-user);
     font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-primary);
     line-height: 22px;
     border-radius: 50%;
     border: none;
-    background: #F05A21;
+    background: var(--color-primary-first);
 }
 
 .search-btn:hover {
-    background: #C0491D;
+    background: var(--color-button-hover-first);
+
 }
 
 
@@ -53,18 +54,20 @@
     position: absolute;
     width: 110px;
     height: 28px;
-    font-family: Verdana, sans-serif;
+
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-primary);
     font-size: 13px;
     line-height: 17px;
-    border: 1px solid #C5C9C6;
+    border: 1px solid var(--color-button-typeproject);
     border-radius: 40px;
     background: none;
+    
 }
 
 .btn-index-type:hover {
-    background-color: #C5C9C6;
+    background-color: var(--color-button-typeproject);
 
 }
 
@@ -107,20 +110,21 @@
     position: absolute;
     width: 196px;
     height: 42px;
-    font-family: Verdana, sans-serif;
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-second);
     text-align: center;
-    color: white;
+    color: var(--background-form-user);
     border: none;
-    background: #F15A22;
+    background: var(--color-primary-first);
     border-radius: 40px;
 
 }
 
 .add-btn:hover {
-    background: #C0491D;
+background: var(--color-button-hover-first);
+
 }
 
 .add-btn-index {
@@ -139,23 +143,26 @@ width: 150px;
 height: 42px;
 left: calc(50% - 150px/2);
 top: 495px;
-font-family: Verdana, sans-serif;
+font-family: var(--font-primary);
 font-style: normal;
-font-weight: 400;
-font-size: 18px;
+font-weight: var(--font-weight-primary);
+font-size: var(--font-size-second);
 text-align: center;
-color: white;
-background: #1D8650;
+color: var(--background-form-user);
+background: var(--color-primary-second);
+
 border-radius: 40px;
 border: none;
 }
 
 button.save-project:hover {
-    background: #176B40;
+
+    background: var(color-button-hover-second);
 }
 
 .login-btn:hover {
-    background: #176B40;
+    background: var(color-button-hover-second);
+
 }
 
 button.add-project-file {
@@ -165,7 +172,9 @@ button.add-project-file {
     height: 28px;
     right: 0;
     border: 1px solid #919191;
-    background-color: #F8F4F4;
+
+    background-color: var(--color-background-admin);
+
     border-radius: 40px;
 }
 
@@ -183,13 +192,14 @@ button.save-project{
     height: 42px;
     right:0;
     bottom: 0;
-    font-family: Verdana, sans-serif;
+
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-third);
     text-align: center;
-    color: white;
-    background: #1C8550;
+    color: var(--background-form-user);
+    background: var(--color-primary-second);
     border-radius: 40px;
     border: none;
 }
@@ -200,12 +210,12 @@ button.save-project-and-create-new{
     height: 42px;
     left: calc(50% - 195px/2 + 274.5px);
     bottom: 0;
-    font-family: Verdana, sans-serif;
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-third);
     text-align: center;
-    color: white;
+    color: var(--background-form-user);
     background: #919191;
     border-radius: 40px;
     border: none;
@@ -221,13 +231,13 @@ button.delete-project {
     height: 42px;
     left: calc(50% - 193px/2 - 325.5px);
     top: 143px;
-    font-family: Verdana, sans-serif;
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-third);
     text-align: center;
-    color: white;
-    background: #F15A22;
+    color: var(--background-form-user);
+    background: var(--color-primary-first);
     border-radius: 40px;
     border: none;
 }
@@ -238,13 +248,15 @@ button.nimi.delete-page {
     height: 23px;
     left: calc(50% - 206px/2 + 212px);
     top: 0;
-    font-family: Verdana, sans-serif;
+
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-primary);
     font-size: 14px;
     text-align: right;
-    color: #343434;
-    background-color:  #F8F4F4;
+    color: var(--color-text);
+    background-color:  var(--color-background-admin);
+
     border: none;
 }
 
@@ -254,13 +266,15 @@ button.year.delete-page {
     right: 20.39%;
     top: 12.43%;
     bottom: 78.38%;
-    font-family: Verdana, sans-serif;
+
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-primary);
     font-size: 8px;
     text-align: right;
-    color: #343434;
-    background-color:  #F8F4F4;
+    color: var(--color-text);
+    background-color:  var(--color-background-admin);
+
     border: none;
 }
 
@@ -270,14 +284,16 @@ button.project.delete-page {
     right: 20.39%;
     top: 31.89%;
     bottom: 51.89%;
-    font-family: Verdana, sans-serif;
+
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-primary);
     font-size: 22px;
     text-align: right;
-    color: #343434;
-    letter-spacing: 0.145em;
-    background-color:  #F8F4F4;
+    color: var(--color-text);
+    letter-spacing: var(--letter-spacing-primary);
+    background-color:  var(--color-background-admin);
+
     border: none;
 }
 
@@ -287,85 +303,80 @@ button.type-delete-page {
     right: 20.39%;
     top: 48.11%;
     bottom: 42.16%;
-    font-family: Verdana, sans-serif;
+
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-primary);
     font-size: 8px;
     text-align: right;
-    color: #343434;
-    background-color:  #F8F4F4;
+    color: var(--color-text);
+    background-color:  var(--color-background-admin);
     border: none;
 }
 
 div.nimi.project-page {
     position: absolute;
     width: 336px;
-    height: 37px;
+
+    height: 27px;
     left: calc(50% - 336px/2 - 39px);
     top: 0px;
-    font-family: Verdana, sans-serif;
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-primary);
     text-align: left;
-    color: #343434;
-    background-color: #1C8550;
+    color: var(--color-text);
 
 }
 
 div.year.project-page {
     position: absolute;
     width: 246px;
-    height: 29px;
+
+    height: 23px;
     left: calc(50% - 246px/2 - 84px);
-    top: 37px;
+    top: 43px;
 
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
     text-align: left;
-    color: #343434;
-
-    background-color: #FFFFFF;
-    background-color: #1C8550;
-    border: none;
+    color: var(--color-text);
 }
 
-button.project.project-page {
+div.project.project-page {
+
     position: absolute;
     width: 530px;
     height: 50px;
     left: calc(50% - 530px/2 + 58px);
     top: 96px;
 
-    font-family: Verdana, sans-serif;
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-primary);
     font-size: 32px;
     text-align: left;
-    color: #343434;
+    color: var(--color-text);
 
-    background-color: #FFFFFF;
+    background-color: var(--background-form-user);
     border: none;
 }
 
-button.type.project-page {
+div.type.project-page {
+
     position: absolute;
     width: 246px;
     height: 29px;
     left: calc(50% - 246px/2 - 84px);
     top: 146px;
 
-    font-family: Verdana, sans-serif;
+    font-family: var(--font-primary);
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-second);
     text-align: left;
-    color: #343434;
+    color: var(--color-text);
 
-    background-color: #FFFFFF;
-    border: none;
+
 }
 
 button.remove {
@@ -375,21 +386,25 @@ button.remove {
     left: 457px;
     top: 275px;
 
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: white;
 
-    background: #F15A22;
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-third);
+    text-align: center;
+    color: var(--background-form-user);
+
+    background: var(--color-primary-first);
+
     border-radius: 40px;
     border: none;
 
 }
 
 button.remove:hover {
-        background: #C0491D;
+
+        background: var(--color-button-hover-first);
+
 }
 
 button.edit {
@@ -399,21 +414,24 @@ button.edit {
     left: 327px;
     top: 275px;
 
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: white;
 
-    background: #1C8550;
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-third);
+    text-align: center;
+    color: var(--background-form-user);
+
+    background: var(--color-primary-second);
+
     border-radius: 40px;
     border: none;
 }
 
 button.edit:hover {
-    background: #176B40;
+    background: var(--color-primary-second);
 }
 button.nimi.project-page.admin, button.project.project-page.admin, button.year.project-page.admin, button.type.project-page.admin {
-    background-color: #F8F4F4;
+    background-color: var(--color-background-admin);
+
 }
