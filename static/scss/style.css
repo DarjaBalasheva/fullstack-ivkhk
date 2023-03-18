@@ -10,7 +10,6 @@
     height: 122px;
     left: calc(50% - 414px/2);
     top: 66px;
-
     background: url("img/logo.png");
 
 }
@@ -25,7 +24,6 @@
 }
 
 h1, h2, h3, h4, input {
-
     font-family: var(--font-primary);
     font-style: var(--font-style-primary);
     font-weight: var(--font-weight-primary);
@@ -39,7 +37,6 @@ h1.index {
     height: 60px;
     left: calc(50% - 414px/2);
     top: 290px;
-    
     font-size: var(--font-size-primary);
     line-height: 29px;
     text-align: center;
@@ -55,7 +52,6 @@ h1.header {
     left: calc(50% - 1068px/2 + 2px);
     top: 247px;
     line-height: 29px;
-
     font-size: var(--font-size-primary);
     letter-spacing: var(--letter-spacing-primary);
     text-align: left;
@@ -71,11 +67,9 @@ input.search {
     left: 32px;
     top: 21px;
     bottom: 25px;
-    
     font-size: var(--font-size-second);
     line-height: 22px;
     color: var(--color-text-input);
-
     border: none;
     }
 
@@ -87,7 +81,6 @@ input.login-pass {
     height: 22px;
     right: 24px;
     bottom: 19px;
-
     font-size: var(--font-size-second);
     line-height: 22px;
     color: var(--color-text-input);
@@ -100,7 +93,6 @@ input.add-project {
     height: 21px;
     left: 18px;
     bottom: 11px;
-
     font-size: var(--font-size-second);
     line-height: 22px;
     color: var(--color-text-input);
@@ -132,7 +124,6 @@ h2.title {
 }
 
 h1.project-page {
-
     font-size: 32px;
     color: var(--color-text);
 }
@@ -143,7 +134,7 @@ h2.project-page {
 
 h3.project-page {
     font-size: var(--font-size-second);
-    margin-top: 0px;
+    margin-top: 0;
 
 }
 
@@ -200,7 +191,7 @@ a:active {
 }
 
 a.index {
-    border-bottom: 0px solid;
+    border-bottom: 0 solid;
 }
 
 img.primary{
@@ -217,7 +208,6 @@ img.second {
     left: 200px;
     margin-top: 6px;
     margin-left: 10px;
-
     height: 48px;
     width: 48px;
     border: 1px;
