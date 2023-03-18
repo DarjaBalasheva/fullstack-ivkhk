@@ -6,6 +6,7 @@ students_dict = [
         "project": "Anna's project",
         "typeproject": "Animatsioon",
         "uuid": "1",
+        "year": "2022"
     },  # элемент массива
     {
         "name": "Roman",
@@ -13,7 +14,8 @@ students_dict = [
         "project": "Roman's project",
         "typeproject": "Helindamine",
         "uuid": "2",
-        "year":"2022"
+        "year": "2022"
+
     },
     {
         "name": "Ivan",
@@ -21,7 +23,7 @@ students_dict = [
         "project": "Ivans's project",
         "typeproject": "Graafika",
         "uuid": "3",
-        "year":"2023"
+        "year": "2023"
     },
     {
         "name": "Marika",
@@ -29,14 +31,14 @@ students_dict = [
         "project": "Marika's project",
         "typeproject": "3D Graafika",
         "uuid": "4",
-        "year":"2023"
+        "year": "2023"
     },
     {
         "name": "Anna",
         "group": "NKMMp22",
         "project": "Anna's project 2",
         "typeproject": "Foto tööde",
-        "uuid": "4",
-        "year":"2023"
+        "uuid": "5",
+        "year": "2023"
     },
 ]
