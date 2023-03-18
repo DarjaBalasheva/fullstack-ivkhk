@@ -3,15 +3,18 @@
   <head lang="et">
     <meta charset="utf-8">
     <title>{{title}}</title>
+
     <link href="/static/scss/style.css" rel="stylesheet" type="text/css">
     <link href="/static/fonts/icomoon/style.css" rel="stylesheet" type="text/css">
     <link href="/static/scss/btn.css" rel="stylesheet" type="text/css">
     <link href="/static/scss/form.css" rel="stylesheet" type="text/css">
+
     <link rel="import" href="header.html">
   </head>
   <body>
     <header class="head-form">
       <a href="/home"><img class="logo-header" src="/static/img/logo.png" alt="logo"></a>
+
 
       <form class="form-search-header" action="/result">
           <div>
@@ -22,7 +25,6 @@
           <button class="search-btn"><i class="icon-search"></i></button>
       </form>
     </header>
-    <h1 class="header">{{caption}}</h1>
     {% block content %}{% endblock %}
   </body>
   </html>
