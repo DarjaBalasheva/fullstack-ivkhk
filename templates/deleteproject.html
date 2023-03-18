@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head lang="et">
-    <meta charset="utf-8">
-    <title>Login</title>
-    <link href="scss/style.css" rel="stylesheet" type="text/css">
-    <link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css">
-    <link href="scss/btn.css" rel="stylesheet" type="text/css">
-    <link href="scss/form.css" rel="stylesheet" type="text/css">
-  </head>
-  <body class="admin">
-    <header class="head-form">
-        <img class="logo-header" src="img/logo.png" alt="logo">
-
-        <form class="form-search-header">
-            <div>
-                <input class="search" type="text" id="input" name="message"
-                    placeholder="õpilase nimi / rühm / lõputööde pealkiri">
-            </div>
-            <button class="drop-btn"><i class="icon-angle-down"></i>proectid</button>
-            <button class="search-btn"><i class="icon-search"></i></button>
-      </form>
-    </header>
+{% extends "headerAdmin.html" %}
+{% block content %} 
     <h1 class="header">Delete project</h1>
 
     <div class="delete-form">
@@ -35,15 +14,14 @@
 
         <button class="delete-project" type="button" onclick="alert('Project deleted')">Delete</button>
 
-        <button class="nimi delete-page" type="button" onclick="alert('result nimi')">Roman Revin</button>
-        <button class="year delete-page" type="button" onclick="alert('result year')">2021  ·  NKMMp21</button>
-        <button class="project delete-page" type="button" onclick="alert('project file')">Minu project</button>
-        <button class="type-delete-page" type="button" onclick="alert('result type')">Helindamine</button>
+        <div class="nimi project-page"><h2 class="project-page"><a href="{{server}}/result?message={{result.name}}">{{result.name}}</a></h2></div>
+        <div class="year project-page"><h3 class="project-page"><a href="{{server}}/result?message={{result.year}}">{{result.year}}</a>  ·  <a href="{{server}}/result?message={{result.group}}">{{result.group}}</a></h3></div>
+        <div class="project project-page"><h1 class="project-page"><a>{{result.project}}</a></h1></div>
+        <div class="type project-page"><h4 class="project-page"><a href="{{server}}/result?message={{result.typeproject}}">{{result.typeproject}}</a></h4></div>
 
         <div class="content-form">
             
         </div>
 
     </div>
-  </body>
-</html>
+{% endblock %}

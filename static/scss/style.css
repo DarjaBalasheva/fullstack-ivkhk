@@ -24,8 +24,7 @@
 
 }
 
-h1, h2, h3, h4, input {
-
+h1, h2, h3, h4, p, input {
     font-family: var(--font-primary);
     font-style: var(--font-style-primary);
     font-weight: var(--font-weight-primary);
@@ -41,6 +40,7 @@ h1.index {
     top: 290px;
     
     font-size: var(--font-size-primary);
+    color: var(--color-primary-second);
     line-height: 29px;
     text-align: center;
     letter-spacing: var(--letter-spacing-primary);
@@ -59,6 +59,7 @@ h1.header {
     font-size: var(--font-size-primary);
     letter-spacing: var(--letter-spacing-primary);
     text-align: left;
+    color: var(--color-primary-second);
 
 }
 
@@ -172,6 +173,11 @@ h2.text {
     color: var(--color-primary-first);
 }
 
+p.projecttype {
+    font-size: var(--font-size-btn);
+    margin: auto;
+}
+
 a {
     color: var(--color-text);
     background-color: transparent;
@@ -194,6 +200,9 @@ a:focus, a:hover {
     border-color: var(--color-border-grey);
 }
 
+a.typeproject:hover, a.typeproject:focus { 
+    border-bottom: 0px solid;
+}
 
 a:active {
     color: var(--color-primary-first);

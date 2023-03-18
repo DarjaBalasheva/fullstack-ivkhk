@@ -18,7 +18,7 @@ templates = Jinja2Templates(directory="../templates")
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("home.html", {"request": request})
 
 
 @app.get("/result", response_class=HTMLResponse)
@@ -34,7 +34,7 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
             "server": domen,
             "results": result,
             "caption": "Resultaat",
-            "title": "Result",
+            "title": "Result page",
         },
     )
 

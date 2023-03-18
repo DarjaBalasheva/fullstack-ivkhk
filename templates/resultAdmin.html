@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head lang="et">
-    <meta charset="utf-8">
-    <title>Login</title>
-    <link href="scss/style.css" rel="stylesheet" type="text/css">
-    <link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css">
-    <link href="scss/btn.css" rel="stylesheet" type="text/css">
-    <link href="scss/form.css" rel="stylesheet" type="text/css">
-  </head>
-  <body class="admin">
-    <header class="head-form">
-        <img class="logo-header" src="img/logo.png" alt="logo">
+{% extends "headerAdmin.html" %}
 
-        <form class="form-search-header">
-            <div>
-                <input class="search" type="text" id="input" name="message"
-                    placeholder="õpilase nimi / rühm / lõputööde pealkiri">
-            </div>
-            <button class="drop-btn"><i class="icon-angle-down"></i>proectid</button>
-            <button class="search-btn"><i class="icon-search"></i></button>
-      </form>
-    </header>
+{% block content %} 
+    
     <h1 class="header">Resultaat</h1> 
     <button class="add-btn add-btn-result" type="button" onclick="alert('Add lõputööde')">Add lõputööde</button>
     <div class="title">
@@ -37,22 +18,24 @@
             <h2 class="title">Tüüp</h2>
         </div>
     </div>
+    
+    {% for result in results %}
+        <div class="string">
+            <div class="nimi">
+                <h3 class="result"><a href="{{server}}/result?message={{result.name}}">{{result.name}}</a></h3>
+            </div>
+            <div class="group">
+                <h3 class="result"><a href="{{server}}/result?message={{result.group}}">{{result.group}}</a></h3>
+            </div>
+            <div class="project">
 
-    <div class="string">
-        <div class="nimi">
-            <h3 class="result">Eesnimi Perekonanimi</h3>
-        </div>
-        <div class="group">
-            <h3 class="result">Grupp</h3>
-        </div>
-        <div class="project">
-            <h3 class="result">Lõpotööd Nimi</h3>
-        </div>
-        <div class="type">
-            <h3 class="result">Tüüp</h3>
-        </div>
-        <div class="box"></div>
-    </div>
-  </body>
+                <h3 class="result"><a href="{{server}}/project?project={{result.project}}&uuid={{result.uuid}}">{{result.project}}</a></h3>
 
-</html>
+            </div>
+            <div class="type">
+                <h3 class="result"><a href="{{server}}/result?message={{result.typeproject}}">{{result.typeproject}}</a></h3>
+            </div>
+            <div class="box"></div>
+        </div>
+    {% endfor %}
+{% endblock %}
