@@ -2,26 +2,29 @@
 <html>
   <head lang="et">
     <meta charset="utf-8">
-    <title>Login</title>
-    <link href="scss/style.css" rel="stylesheet" type="text/css">
-    <link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css">
-    <link href="scss/btn.css" rel="stylesheet" type="text/css">
-    <link href="scss/form.css" rel="stylesheet" type="text/css">
+    <title>{{title}}</title>
+    <link href="../static/scss/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/fonts/icomoon/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/scss/btn.css" rel="stylesheet" type="text/css">
+    <link href="../static/scss/form.css" rel="stylesheet" type="text/css">
+    <link rel="import" href="header.html">
   </head>
-  <body class="admin">
+  <body>
     <header class="head-form">
-        <img class="logo-header" src="img/logo.png" alt="logo">
+      <a href="/home"><img class="logo-header" src="../static/img/logo.png" alt="logo"></a>
 
-      <form class="form-search-header">
-        <div>
-          <input class="search" type="text" id="input" name="message"
+      <form class="form-search-header" action="/result">
+          <div>
+              <input class="search" type="text" id="input" name="message"
                   placeholder="õpilase nimi / rühm / lõputööde pealkiri">
-        </div>
-          
-          <button class="drop-btn"><i class="icon-angle-down"></i>proectid</button>
+          </div>
+          <button class="drop-btn"><i class="icon-angle-down"></i> proectid</button>
           <button class="search-btn"><i class="icon-search"></i></button>
       </form>
-    </header>  
+    </header>
+    <h1 class="header">{{caption}}</h1>
+    {% block content %}{% endblock %}
   </body>
+  </html>
 
-</html>
+

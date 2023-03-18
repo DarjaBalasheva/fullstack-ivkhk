@@ -1,13 +1,7 @@
-/* Шрифт по умолчанию */
-@font-face {
-    font-family: Verdana; /* Имя шрифта */
-    src: url("../fonts/Verdana.ttf") format("truetype");     /* адрес шрифта и тип */
-    font-style: normal; 
-    font-weight: 400; 
-    }
+@import url("variable.css");
 
 .admin {
-    background-color: #F8F4F4;
+    background-color: var(--color-background-admin);
 }
 
 .logo-index {
@@ -16,7 +10,9 @@
     height: 122px;
     left: calc(50% - 414px/2);
     top: 66px;
-    background: url("../img/logo.png");
+
+    background: url("img/logo.png");
+
 }
 
 .logo-header {
@@ -28,21 +24,27 @@
 
 }
 
+h1, h2, h3, h4, input {
+
+    font-family: var(--font-primary);
+    font-style: var(--font-style-primary);
+    font-weight: var(--font-weight-primary);
+    color: var(--color-text);
+}
+
+
 h1.index {
     position: absolute;
     width: 414px;
     height: 60px;
     left: calc(50% - 414px/2);
     top: 290px;
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+    
+    font-size: var(--font-size-primary);
     line-height: 29px;
     text-align: center;
-    letter-spacing: 0.145em;
+    letter-spacing: var(--letter-spacing-primary);
     text-transform: uppercase;
-    color: #1C8550;
 
     }
 
@@ -52,14 +54,12 @@ h1.header {
     height: 71px;
     left: calc(50% - 1068px/2 + 2px);
     top: 247px;
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
     line-height: 29px;
-    letter-spacing: 0.145em;
+
+    font-size: var(--font-size-primary);
+    letter-spacing: var(--letter-spacing-primary);
     text-align: left;
-    color: #1D8650;
+
 }
 
 input.search {
@@ -71,12 +71,11 @@ input.search {
     left: 32px;
     top: 21px;
     bottom: 25px;
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    
+    font-size: var(--font-size-second);
     line-height: 22px;
-    color: black;
+    color: var(--color-text-input);
+
     border: none;
     }
 
@@ -88,12 +87,10 @@ input.login-pass {
     height: 22px;
     right: 24px;
     bottom: 19px;
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+
+    font-size: var(--font-size-second);
     line-height: 22px;
-    color: black;
+    color: var(--color-text-input);
     border: none;
 }
 
@@ -103,12 +100,10 @@ input.add-project {
     height: 21px;
     left: 18px;
     bottom: 11px;
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+
+    font-size: var(--font-size-second);
     line-height: 22px;
-    color: black;
+    color: var(--color-text-input);
     border: none;
 
 }
@@ -119,54 +114,113 @@ input:active, :hover, :focus {
 }
 
 ::placeholder {
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-family: var(--font-primary);
+    font-style: var(--font-style-primary);
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-second);
     line-height: 22px;
     color: #D8D8D8;
     }
 
 h2.title {
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    letter-spacing: 0.145em;
+    letter-spacing: var(--letter-spacing-primary);
     text-indent: 12px;
     color: #919191;
 
 }
 
+h1.project-page {
+
+    font-size: 32px;
+    color: var(--color-text);
+}
+
+h2.project-page {
+    font-size: var(--font-size-primary);
+}
+
+h3.project-page {
+    font-size: var(--font-size-second);
+    margin-top: 0px;
+
+}
+
+h4.project-page {
+    font-size: var(--font-size-second);
+}
+
 h3.result {
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-size: var(--font-size-second);
     line-height: 22px;
     text-indent: 12px;
-    color: #343434;
     }
 
 h2.column {
     width: 204px;
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-size: var(--font-size-second);
     line-height: 22px;
     text-align: right;
-    color: #343434;
 }
 
 h2.text {
-    font-family: Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-size: var(--font-size-second);
     line-height: 22px;
     text-align: center;
     margin-top: 0%;
-    color: #F15A22;
+    color: var(--color-primary-first);
+}
+
+a {
+    color: var(--color-text);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+a:link {
+    color: var(--color-text);
+}
+
+a:visited {
+    color: var(--color-text);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+a:focus, a:hover {
+    border-bottom: 1px solid;
+    border-color: var(--color-border-grey);
+}
+
+
+a:active {
+    color: var(--color-primary-first);
+}
+
+a.index {
+    border-bottom: 0px solid;
+}
+
+img.primary{
+    height: 258px;
+    width: 258px;
+    border: 1px;
+    object-fit:cover;
+    border-color: var(--color-border-grey);
+}
+
+img.second {
+    position: relative;
+    align-items: right;
+    left: 200px;
+    margin-top: 6px;
+    margin-left: 10px;
+
+    height: 48px;
+    width: 48px;
+    border: 1px;
+    object-fit:cover;
+    border-color: var(--color-border-grey);
 }
