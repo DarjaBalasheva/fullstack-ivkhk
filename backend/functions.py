@@ -16,3 +16,8 @@ def find_everyone(students_dict, value):
 
 def find_all(students_dict):
   return {"data": students_dict}
+
+def find_project(student_dict, uuid):
+    for i in student_dict:
+        if i["uuid"] == uuid:
+            return i
