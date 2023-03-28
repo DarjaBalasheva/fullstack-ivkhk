@@ -15,7 +15,6 @@
     height: 68px;
     left: calc(50% - 630px/2);
     top: 379px;
-
     border: var(--color-border-grey);
     border-radius: var(--border-radius-primary);
     }
@@ -38,11 +37,6 @@ form.input-add-project {
     height: 45px;
     background: var(--background-form-user);
     border-radius: var(--border-radius-primary);
-}
-
-form.input-add-project{
-    top: 0;
-    right: 0;
 }
 
 
@@ -243,8 +237,8 @@ div.content-form.project-page {
     position: absolute;
     width: 258px;
     height: 316px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
 
 }
 
