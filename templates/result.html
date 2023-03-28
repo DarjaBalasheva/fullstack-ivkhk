@@ -1,16 +1,17 @@
 {% extends "header.html" %}
 
 {% block content %} 
-    <h1 class="header">Resultaat</h1> 
+    <h1 class="header">Tulemused</h1> 
+
     <div class="title">
         <div class="nimi">
             <h2 class="title">Eesnimi Perekonanimi</h2>
         </div>
         <div class="group">
-            <h2 class="title">Grupp</h2>
+            <h2 class="title">Rühm</h2>
         </div>
         <div class="project">
-            <h2 class="title">Lõpotööd Nimi</h2>
+            <h2 class="title">Lõpotööd Nimetus</h2>
         </div>
         <div class="type">
             <h2 class="title">Tüüp</h2>
@@ -20,10 +21,10 @@
     {% for result in results %}
         <div class="string">
             <div class="nimi">
-                <h3 class="result"><a href="{{server}}/result?message={{result.name}}">{{result.name}}</a></h3>
+                <h3 class="result"><a href="{{server}}/result?message={{result.name}}&key=name">{{result.name}}</a></h3>
             </div>
             <div class="group">
-                <h3 class="result"><a href="{{server}}/result?message={{result.group}}">{{result.group}}</a></h3>
+                <h3 class="result"><a href="{{server}}/result?message={{result.group}}&key=group">{{result.group}}</a></h3>
             </div>
             <div class="project">
 
@@ -31,7 +32,8 @@
 
             </div>
             <div class="type">
-                <h3 class="result"><a href="{{server}}/result?message={{result.typeproject}}">{{result.typeproject}}</a></h3>
+                <h3 class="result"><a href="{{server}}/result?message={{result.typeproject}}&key=typeproject">{{result.typeproject}}</a></h3>
+
             </div>
             
             <div class="box"></div>

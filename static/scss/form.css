@@ -240,7 +240,18 @@ div.content-form.project-page {
     left: 0;
     top: 0;
 
+
+
 }
+
+div.second-content {
+    position: absolute;
+    width: 258px;
+    height: 48px;
+    left: 0px;
+    top: 268px; 
+}
+
 
 div.project-form {
     position: absolute;
@@ -248,4 +259,58 @@ div.project-form {
     height: 316px;
     left: calc(50% - 1064px/2);
     top: 283px;
+}
+
+div.btn-index-type {
+    box-sizing: border-box;
+    position: absolute;
+    width: 110px;
+    height: 28px;
+    font-size: 13px;
+    line-height: 17px;
+    border: 1px solid var(--color-button-typeproject);
+    border-radius: 40px;
+    background: none;
+    display: flex;    
+
+}
+
+div.btn-index-type:hover {
+    background-color: var(--color-button-typeproject);
+
+}
+
+div.btn1-index {
+    left: calc(50% - 110px/2 - 241px);
+    top: 0;
+}
+
+div.btn2-index {
+    left: calc(50% - 110px/2 - 121px);
+    top: 0;
+}
+
+div.btn3-index {
+    left: calc(50% - 110px/2);
+    top: 0;
+}
+
+div.btn4-index {
+    left: calc(50% - 110px/2 + 120px);
+    top: 0;
+}
+
+div.btn5-index {
+    left: calc(50% - 110px/2 + 240px);
+    top: 0;
+}
+
+div.btn6-index {
+    left: calc(50% - 110px/2 - 60px);
+    top: 38px;
+}
+
+div.btn7-index {
+    left: calc(50% - 110px/2 + 60px);
+    top: 38px;
 }

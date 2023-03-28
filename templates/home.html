@@ -2,7 +2,8 @@
 <html>
   <head lang="et">
     <meta charset="utf-8">
-    <title>NKMM</title>
+    <title>Multimedia projects</title>
+
     <link href="/static/scss/style.css" rel="stylesheet" type="text/css">
     <link href="/static/fonts/icomoon/style.css" rel="stylesheet" type="text/css">
     <link href="/static/scss/btn.css" rel="stylesheet" type="text/css">
@@ -10,31 +11,41 @@
   </head>
   <body>
     <header>
-      <img class="logo-index" src="/static/img/logo.png" alt="logo">
-      <h1 class="index">Multimeedia lõpotööd</h1>
+      <img class="logo-index" src="../static/img/logo.png" alt="logo">
+      <h1 class="index">Multimeedia lõputööd</h1>
+
     </header>
 
 
-    <form class="form-search-index" action="/result">
+    <form class="form-search-index" action="/result" id="search">
 
       <div>
         <input class="search" type="text" id="input" name="message"
                 placeholder="õpilase nimi / rühm / lõputööde pealkiri">
       </div>
         
-        <button class="drop-btn"><i class="icon-angle-down"></i> proectid</button>
-        <button class="search-btn"><i class="icon-search"></i></button>
+      <div>
+        <select class="drop-btn" name="key" form="search"><i class="icon-angle-down"></i>
+          <option>kõik</option>
+          <option>project</option>
+          <option>name</option>
+          <option>group</option>
+        </select>
+    </div>
+        <button class="search"><i class="icon-search"></i></button>
     </form>  
     
-    <form class="form-btn-type">
-      <button class="btn-index-type btn1-index">Animatsioon</button>
-      <button class="btn-index-type btn2-index" type="button" onclick="alert('Helindamine')">Helindamine</button>
-      <button class="btn-index-type btn3-index" type="button" onclick="alert('Graafika')">Graafika</button>
-      <button class="btn-index-type btn4-index" type="button" onclick="alert('3D Graafika')">3D Graafika</button>
-      <button class="btn-index-type btn5-index" type="button" onclick="alert('Video')">Video</button>
-      <button class="btn-index-type btn6-index" type="button" onclick="alert('Veebiarendus')">Veebiarendus</button>
-      <button class="btn-index-type btn7-index" type="button" onclick="alert('Foto tööde')">Foto tööde</button>
-    </form>
+    <div class="form-btn-type">
+      <div class="btn-index-type btn1-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Animatsioon&key=typeproject">Animatsioon</a></p></div>
+      <div class="btn-index-type btn2-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Helindamine&key=typeproject">Helindamine</a></p></div>
+      <div class="btn-index-type btn3-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Graafika&key=typeproject">Graafika</a></p></div>
+      <div class="btn-index-type btn4-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=3D Graafika&key=typeproject">3D Graafika</a></p></div>
+      <div class="btn-index-type btn5-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Video&key=typeproject">Video</a></p></div>
+      <div class="btn-index-type btn6-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Veebiarendus&key=typeproject">Veebiarendus</a></p></div>
+      <div class="btn-index-type btn7-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Fototööd&key=typeproject">Fototööde</a></p></div>
+      
+
+    </div>
   </body>
 
 </html>

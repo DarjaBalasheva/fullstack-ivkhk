@@ -1,35 +1,37 @@
 /* Шрифт по умолчанию */
 @import url("variable.css");
 
-.drop-btn {
+button{
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: var(--font-weight-primary);
+}
+
+drop-btn {
     position: absolute;
     width: 116px;
     height: 47px;
     left: 436px;
     top: 7px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
     font-size: var(--font-size-second);
     line-height: 22px;
     text-align: right;
-    
     /* Text */
     color: #919191;
     background-color: var(--background-form-user);
     border: none;
 }
 
-.search-btn {
+button.search {
     position: absolute;
     width: 48px;
     height: 48px;
     right:7px;
     top: 7px;
-    font-family: var(--font-primary);
+
+
     color: var(--background-form-user);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
     font-size: var(--font-size-primary);
     line-height: 22px;
     border-radius: 50%;
@@ -37,69 +39,11 @@
     background: var(--color-primary-first);
 }
 
-.btn-index-type {
-    box-sizing: border-box;
-    position: absolute;
-    width: 110px;
-    height: 28px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
-    font-size: 13px;
-    line-height: 17px;
-    border: 1px solid var(--color-button-typeproject);
-    border-radius: 40px;
-    background: none;
-    
-}
+button.add-btn {
 
-.btn-index-type:hover {
-    background-color: var(--color-button-typeproject);
-
-}
-
-.btn1-index {
-    left: calc(50% - 110px/2 - 241px);
-    top: 0;
-}
-
-.btn2-index {
-    left: calc(50% - 110px/2 - 121px);
-    top: 0;
-}
-
-.btn3-index {
-    left: calc(50% - 110px/2);
-    top: 0;
-}
-
-.btn4-index {
-    left: calc(50% - 110px/2 + 120px);
-    top: 0;
-}
-
-.btn5-index {
-    left: calc(50% - 110px/2 + 240px);
-    top: 0;
-}
-
-.btn6-index {
-    left: calc(50% - 110px/2 - 60px);
-    top: 38px;
-}
-
-.btn7-index {
-    left: calc(50% - 110px/2 + 60px);
-    top: 38px;
-}
-
-.add-btn {
     position: absolute;
     width: 196px;
     height: 42px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
     font-size: var(--font-size-second);
     text-align: center;
     color: var(--background-form-user);
@@ -109,30 +53,27 @@
 
 }
 
-.add-btn:hover {
+button.add-btn:hover {
 background: var(--color-button-hover-first);
 
 }
 
-.add-btn-index {
+button.add-btn-index {
     left: calc(50% - 196px/2);
     top: 625px;
 }
 
-.add-btn-result {
+button.add-btn-result {
     left: calc(50% - 196px/2 + 434px);
     top: 205px;
 }
 
-.login-btn {
+button.login-btn {
     position: absolute;
 width: 150px;
 height: 42px;
 left: calc(50% - 150px/2);
 top: 495px;
-font-family: var(--font-primary);
-font-style: normal;
-font-weight: var(--font-weight-primary);
 font-size: var(--font-size-second);
 text-align: center;
 color: var(--background-form-user);
@@ -142,8 +83,9 @@ border: none;
 }
 
 
-.login-btn:hover {
-    background: var(color-button-hover-second);
+button.login-btn:hover {
+    background: var(--color-button-hover-second);
+
 
 }
 
@@ -172,9 +114,7 @@ button.save-project{
     height: 42px;
     right:0;
     bottom: 0;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
     font-size: var(--font-size-third);
     text-align: center;
     color: var(--background-form-user);
@@ -193,9 +133,6 @@ button.save-project-and-create-new{
     height: 42px;
     left: calc(50% - 195px/2 + 274.5px);
     bottom: 0;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
     font-size: var(--font-size-third);
     text-align: center;
     color: var(--background-form-user);
@@ -214,9 +151,7 @@ button.delete-project {
     height: 42px;
     left: calc(50% - 193px/2 - 325.5px);
     top: 143px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
     font-size: var(--font-size-third);
     text-align: center;
     color: var(--background-form-user);
@@ -231,9 +166,7 @@ button.nimi.delete-page {
     height: 23px;
     left: calc(50% - 206px/2 + 212px);
     top: 0;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
     font-size: 14px;
     text-align: right;
     color: var(--color-text);
@@ -244,9 +177,7 @@ button.nimi.delete-page {
 button.year.delete-page {
     position: absolute;
     inset: 12.43% 20.39% 78.38% 65.41%;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
     font-size: 8px;
     text-align: right;
     color: var(--color-text);
@@ -257,9 +188,8 @@ button.year.delete-page {
 button.project.delete-page {
     position: absolute;
     inset: 31.89% 20.39% 51.89% 49.15%;
-    font-family: var(--font-primary);
+
     font-style: normal;
-    font-weight: var(--font-weight-primary);
     font-size: 22px;
     text-align: right;
     color: var(--color-text);
@@ -271,9 +201,9 @@ button.project.delete-page {
 button.type-delete-page {
     position: absolute;
     inset: 48.11% 20.39% 42.16% 65.41%;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
+
+
     font-size: 8px;
     text-align: right;
     color: var(--color-text);
@@ -287,9 +217,9 @@ div.nimi.project-page {
     height: 27px;
     left: calc(50% - 336px/2 - 39px);
     top: 0;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
+
+
     font-size: var(--font-size-primary);
     text-align: left;
     color: var(--color-text);
@@ -312,13 +242,12 @@ div.project.project-page {
     height: 50px;
     left: calc(50% - 530px/2 + 58px);
     top: 96px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
     font-size: 32px;
     text-align: left;
     color: var(--color-text);
-    background-color: var(--background-form-user);
+
+
     border: none;
 }
 
@@ -328,9 +257,9 @@ div.type.project-page {
     height: 29px;
     left: calc(50% - 246px/2 - 84px);
     top: 146px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
+
+
     font-size: var(--font-size-second);
     text-align: left;
     color: var(--color-text);
@@ -344,9 +273,8 @@ button.remove {
     height: 28px;
     left: 457px;
     top: 275px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
+
     font-size: var(--font-size-third);
     text-align: center;
     color: var(--background-form-user);
@@ -367,9 +295,8 @@ button.edit {
     height: 28px;
     left: 327px;
     top: 275px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: var(--font-weight-primary);
+
+
     font-size: var(--font-size-third);
     text-align: center;
     color: var(--background-form-user);
