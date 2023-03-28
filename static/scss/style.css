@@ -24,6 +24,7 @@
 }
 
 h1, h2, h3, h4, p, input {
+
     font-family: var(--font-primary);
     font-style: var(--font-style-primary);
     font-weight: var(--font-weight-primary);
@@ -203,6 +204,7 @@ a:active {
 }
 
 a.index, a.conent {
+
     border-bottom: 0 solid;
 }
 
@@ -221,6 +223,7 @@ img.second {
     margin-top: 0px;
     margin-right: -111px;
     left: calc(50% - 48px/2 + 105px);
+
     height: 48px;
     width: 48px;
     border: 1px;

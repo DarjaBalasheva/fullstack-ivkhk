@@ -30,6 +30,7 @@ button.search {
     right:7px;
     top: 7px;
 
+
     color: var(--background-form-user);
     font-size: var(--font-size-primary);
     line-height: 22px;
@@ -85,6 +86,7 @@ border: none;
 button.login-btn:hover {
     background: var(--color-button-hover-second);
 
+
 }
 
 button.add-project-file {
@@ -112,7 +114,6 @@ button.save-project{
     height: 42px;
     right:0;
     bottom: 0;
-
 
     font-size: var(--font-size-third);
     text-align: center;
@@ -201,6 +202,8 @@ button.type-delete-page {
     position: absolute;
     inset: 48.11% 20.39% 42.16% 65.41%;
 
+
+
     font-size: 8px;
     text-align: right;
     color: var(--color-text);
@@ -214,6 +217,8 @@ div.nimi.project-page {
     height: 27px;
     left: calc(50% - 336px/2 - 39px);
     top: 0;
+
+
 
     font-size: var(--font-size-primary);
     text-align: left;
@@ -237,9 +242,11 @@ div.project.project-page {
     height: 50px;
     left: calc(50% - 530px/2 + 58px);
     top: 96px;
+
     font-size: 32px;
     text-align: left;
     color: var(--color-text);
+
 
     border: none;
 }
@@ -250,6 +257,8 @@ div.type.project-page {
     height: 29px;
     left: calc(50% - 246px/2 - 84px);
     top: 146px;
+
+
 
     font-size: var(--font-size-second);
     text-align: left;
@@ -264,6 +273,8 @@ button.remove {
     height: 28px;
     left: 457px;
     top: 275px;
+
+
     font-size: var(--font-size-third);
     text-align: center;
     color: var(--background-form-user);
@@ -284,6 +295,7 @@ button.edit {
     height: 28px;
     left: 327px;
     top: 275px;
+
 
     font-size: var(--font-size-third);
     text-align: center;
