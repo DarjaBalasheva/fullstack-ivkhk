@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head lang="et">
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+
+    <link href="/static/scss/style.css" rel="stylesheet" type="text/css">
+    <link href="/static/fonts/icomoon/style.css" rel="stylesheet" type="text/css">
+    <link href="/static/scss/btn.css" rel="stylesheet" type="text/css">
+    <link href="/static/scss/form.css" rel="stylesheet" type="text/css">
+
+    <link rel="import" href="header.html">
+  </head>
+  <body>
+    <header class="head-form">
+      <a href="/home"><img class="logo-header" src="/static/img/logo.png" alt="logo"></a>
+
+
+      <form class="form-search-header" action="/result" id="search">
+          <div>
+              <input class="search" type="text" id="input" name="message"
+                  placeholder="õpilase nimi / rühm / lõputööde pealkiri">
+          </div>
+        
+        <div>
+            <select class="drop-btn" name="key" form="search"><i class="icon-angle-down"></i>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+            </select>
+        </div>
+
+
+          <button class="search-btn"><i class="icon-search"></i></button>
+      </form>
+    </header>
+  </body>
+  </html>

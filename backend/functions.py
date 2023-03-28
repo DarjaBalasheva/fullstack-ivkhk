@@ -2,9 +2,14 @@
 def find_item(students_dict, key, value):
   h = []
   for i in students_dict:
-    if i[key].lower() == value.lower():
+    if value.lower() in i[key].lower():
       h.append(i)
   return h
+
+# def find_better(students_dict):
+#    h = []
+#    for i in students_dict:
+      
 
 def find_everyone(students_dict, value):
   h = []

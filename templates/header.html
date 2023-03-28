@@ -16,13 +16,21 @@
       <a href="/home"><img class="logo-header" src="/static/img/logo.png" alt="logo"></a>
 
 
-      <form class="form-search-header" action="/result">
+      <form class="form-search-header" action="/result" id="search">
           <div>
               <input class="search" type="text" id="input" name="message"
                   placeholder="õpilase nimi / rühm / lõputööde pealkiri">
           </div>
-          <button class="drop-btn"><i class="icon-angle-down"></i> proectid</button>
-          <button class="search-btn"><i class="icon-search"></i></button>
+          <div>
+            <select class="drop-btn" name="key" form="search"><i class="icon-angle-down"></i>
+                <option>kõik</option>
+                <option>project</option>
+                <option>name</option>
+                <option>group</option>
+            </select>
+        </div>
+
+          <button class="search"><i class="icon-search"></i></button>
       </form>
     </header>
     {% block content %}{% endblock %}

@@ -23,7 +23,7 @@
 
 }
 
-h1, h2, h3, h4, input {
+h1, h2, h3, h4, p, input {
     font-family: var(--font-primary);
     font-style: var(--font-style-primary);
     font-weight: var(--font-weight-primary);
@@ -42,6 +42,7 @@ h1.index {
     text-align: center;
     letter-spacing: var(--letter-spacing-primary);
     text-transform: uppercase;
+    color: var(--color-primary-second);
 
     }
 
@@ -54,6 +55,7 @@ h1.header {
     line-height: 29px;
     font-size: var(--font-size-primary);
     letter-spacing: var(--letter-spacing-primary);
+    color: var(--color-primary-second);
     text-align: left;
 
 }
@@ -163,6 +165,11 @@ h2.text {
     color: var(--color-primary-first);
 }
 
+p.projecttype {
+    margin: auto;
+    font-size: var(--font-size-btn);
+}
+
 a {
     color: var(--color-text);
     background-color: transparent;
@@ -180,9 +187,14 @@ a:visited {
     text-decoration: none;
   }
 
+
 a:focus, a:hover {
     border-bottom: 1px solid;
     border-color: var(--color-border-grey);
+}
+
+a.typeproject:focus, a.typeproject:hover {
+    border-bottom: 0px solid;
 }
 
 
@@ -190,7 +202,7 @@ a:active {
     color: var(--color-primary-first);
 }
 
-a.index {
+a.index, a.conent {
     border-bottom: 0 solid;
 }
 
@@ -200,17 +212,76 @@ img.primary{
     border: 1px;
     object-fit:cover;
     border-color: var(--color-border-grey);
+    cursor: pointer;
 }
+
 
 img.second {
     position: relative;
-    align-items: right;
-    left: 200px;
-    margin-top: 6px;
-    margin-left: 10px;
+    margin-top: 0px;
+    margin-right: -111px;
+    left: calc(50% - 48px/2 + 105px);
     height: 48px;
     width: 48px;
     border: 1px;
     object-fit:cover;
     border-color: var(--color-border-grey);
 }
+
+
+.custom-select select {
+    display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+background-color: white;
+border: none;
+}
+
+select {
+    position: relative;
+    width: 116px;
+    height: 47px;
+    left: 436px;
+    top: 7px;
+
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: var(--font-weight-primary);
+    font-size: var(--font-size-second);
+
+    line-height: 22px;
+    text-align: right;
+    
+    /* Text */
+    color: #919191;
+
+    background-color: var(--background-form-user);
+    border: none;
+}
+
+img:before {  
+    content: " ";
+    display: block;
+  
+    position: absolute;
+    top: -10px;
+    left: 0;
+    height: calc(100% + 10px);
+    width: 100%;
+    background-color:#D8D8D8;
+  }
+  
+  img:after {  
+    content: url("../img/play.png");
+    display: block;
+  
+    position: absolute;
+    background-color: #D8D8D8;
+
+    top: 12px;
+    left: 12px;
+    width: 100%;
+    
+  }
+

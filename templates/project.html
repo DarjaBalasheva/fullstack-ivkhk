@@ -2,16 +2,20 @@
 {% block content %} 
     <div class="project-form">
 
-        <div class="nimi project-page"><h2 class="project-page"><a href="{{server}}/result?message={{result.name}}">{{result.name}}</a></h2></div>
-        <div class="year project-page"><h3 class="project-page"><a href="{{server}}/result?message={{result.year}}">{{result.year}}</a>  ·  <a href="{{server}}/result?message={{result.group}}">{{result.group}}</a></h3></div>
+        <div class="nimi project-page"><h2 class="project-page"><a href="{{server}}/result?message={{result.name}}&key=name">{{result.name}}</a></h2></div>
+        <div class="year project-page"><h3 class="project-page"><a href="{{server}}/result?message={{result.year}}&key=year">{{result.year}}</a>  ·  <a href="{{server}}/result?message={{result.group}}&key=group">{{result.group}}</a></h3></div>
         <div class="project project-page"><h1 class="project-page"><a>{{result.project}}</a></h1></div>
-        <div class="type project-page"><h4 class="project-page"><a href="{{server}}/result?message={{result.typeproject}}">{{result.typeproject}}</a></h4></div>
+        <div class="type project-page"><h4 class="project-page"><a href="{{server}}/result?message={{result.typeproject}}&key=typeproject">{{result.typeproject}}</a></h4></div>
 
         <div class="content-form project-page">
-            <img class="primary" src="../static/img/project1.jpeg">
-            <img class="second" src="../static/img/project2.jpeg">
-        </div>
+            <a class="conent" href="{{result.app_file_primary}}" target="_blank"><img class="primary" src="{{result.app_file_primary}}"></a>
 
+        <div class="second-content">
+            {% for content in result.app_files %}
+            <object><a class="conent" href="{{content}}" target="_blank"><img class="second" src="{{content}}"></a></object>
+            {% endfor %}
+        </div>
+        </div>
     </div>
 {% endblock %}
 
