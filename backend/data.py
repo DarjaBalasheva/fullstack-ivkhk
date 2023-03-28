@@ -7,10 +7,12 @@ students_dict = [
         "project": "Anna's project",
         "typeproject": "Animatsioon",
         "uuid": "1",
+
         "year": "2022",
         "app_file_primary" : "../static/img/project_mg/project2.jpeg",
         "app_files" : ["../static/img/project_mg/project2.jpeg", "../static/img/project_mg/videoplayback.mp4"],
         "good_project": True
+
     },  # элемент массива
     {
         "name": "Roman",
@@ -23,6 +25,7 @@ students_dict = [
         "app_files" : ["../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg"],
         "good_project": True
 
+
     },
     {
         "name": "Ivan",
@@ -34,6 +37,8 @@ students_dict = [
         "app_file_primary" : "../static/img/project_mg/project1.jpeg",
         "app_files" : ["../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg","../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg"],
         "good_project": True
+
+
     },
     {
         "name": "Marika",
@@ -45,6 +50,7 @@ students_dict = [
         "app_files" : ["../static/img/project_mg/project2.jpeg"],
         "good_project": False,
         "app_file_primary" : "../static/img/project_mg/project1.jpeg"
+
     },
     {
         "name": "Anna",
@@ -56,5 +62,6 @@ students_dict = [
         "app_file_primary" : "../static/img/project_mg/project2.jpeg",
         "good_project": False,
         "app_files" : ["../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg"]
+
     },
 ]

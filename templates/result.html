@@ -2,6 +2,7 @@
 
 {% block content %} 
     <h1 class="header">Tulemused</h1> 
+
     <div class="title">
         <div class="nimi">
             <h2 class="title">Eesnimi Perekonanimi</h2>
@@ -32,7 +33,9 @@
             </div>
             <div class="type">
                 <h3 class="result"><a href="{{server}}/result?message={{result.typeproject}}&key=typeproject">{{result.typeproject}}</a></h3>
+
             </div>
+            
             <div class="box"></div>
         </div>
     {% endfor %}
