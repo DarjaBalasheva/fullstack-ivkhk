@@ -1,5 +1,5 @@
 domen = "http://127.0.0.1:8000"
-key_search = ['project', 'name', 'group', 'typeproject']
+key_search = ['project', 'name', 'group', 'typeproject', "top", "year"]
 students_dict = [
     {
         "name": "Anna",
@@ -11,7 +11,7 @@ students_dict = [
         "year": "2022",
         "app_file_primary" : "../static/img/project_mg/project2.jpeg",
         "app_files" : ["../static/img/project_mg/project2.jpeg", "../static/img/project_mg/videoplayback.mp4"],
-        "good_project": True
+        "top": True
 
     },  # элемент массива
     {
@@ -23,7 +23,7 @@ students_dict = [
         "year": "2022",
         "app_file_primary" : "../static/img/project_mg/project1.jpeg",
         "app_files" : ["../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg"],
-        "good_project": True
+        "top": True
 
 
     },
@@ -36,7 +36,7 @@ students_dict = [
         "year": "2023",
         "app_file_primary" : "../static/img/project_mg/project1.jpeg",
         "app_files" : ["../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg","../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg"],
-        "good_project": True
+        "top": True
 
 
     },
@@ -48,7 +48,7 @@ students_dict = [
         "uuid": "4",
         "year": "2023",
         "app_files" : ["../static/img/project_mg/project2.jpeg"],
-        "good_project": False,
+        "top": False,
         "app_file_primary" : "../static/img/project_mg/project1.jpeg"
 
     },
@@ -60,7 +60,7 @@ students_dict = [
         "uuid": "5",
         "year": "2023",
         "app_file_primary" : "../static/img/project_mg/project2.jpeg",
-        "good_project": False,
+        "top": False,
         "app_files" : ["../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg", "../static/img/project_mg/project2.jpeg"]
 
     },
