@@ -7,7 +7,9 @@ name = "pypi"
 fastapi = "*"
 black = "*"
 flake8 = "*"
+autoflake = "*"
 pre-commit = "*"
+marshmallow = "*"
 
 
 

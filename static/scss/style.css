@@ -24,7 +24,6 @@
 }
 
 h1, h2, h3, h4, p, input {
-
     font-family: var(--font-primary);
     font-style: var(--font-style-primary);
     font-weight: var(--font-weight-primary);
@@ -195,7 +194,7 @@ a:focus, a:hover {
 }
 
 a.typeproject:focus, a.typeproject:hover {
-    border-bottom: 0px solid;
+    border-bottom: 0 solid;
 }
 
 
@@ -204,7 +203,6 @@ a:active {
 }
 
 a.index, a.conent {
-
     border-bottom: 0 solid;
 }
 
@@ -220,10 +218,9 @@ img.primary{
 
 img.second {
     position: relative;
-    margin-top: 0px;
+    margin-top: 0;
     margin-right: -111px;
     left: calc(50% - 48px/2 + 105px);
-
     height: 48px;
     width: 48px;
     border: 1px;
@@ -232,41 +229,37 @@ img.second {
 }
 
 
-.custom-select select {
-    display: none; /*hide original SELECT element:*/
-}
-
-.select-selected {
-background-color: white;
-border: none;
-}
-
 select {
     position: relative;
     width: 116px;
     height: 47px;
     left: 436px;
     top: 7px;
-
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: var(--font-weight-primary);
     font-size: var(--font-size-second);
-
     line-height: 22px;
     text-align: right;
     
     /* Text */
     color: #919191;
-
     background-color: var(--background-form-user);
     border: none;
 }
 
-img:before {  
+.custom-select select {
+    display: none; /* hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: white;
+    border: none;
+}
+
+img::before {  
     content: " ";
     display: block;
-  
     position: absolute;
     top: -10px;
     left: 0;
@@ -275,13 +268,11 @@ img:before {
     background-color:#D8D8D8;
   }
   
-  img:after {  
+  img::after {  
     content: url("../img/play.png");
     display: block;
-  
     position: absolute;
     background-color: #D8D8D8;
-
     top: 12px;
     left: 12px;
     width: 100%;
