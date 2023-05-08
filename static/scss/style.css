@@ -10,7 +10,6 @@
     height: 122px;
     left: calc(50% - 414px/2);
     top: 66px;
-    background: url("img/logo.png");
 
 }
 
@@ -202,7 +201,7 @@ a:active {
     color: var(--color-primary-first);
 }
 
-a.index, a.conent {
+a.index, a.content {
     border-bottom: 0 solid;
 }
 
@@ -241,11 +240,11 @@ select {
     font-size: var(--font-size-second);
     line-height: 22px;
     text-align: right;
-    
+    background-color: var(--background-form-user) !important;
+    border: none !important;
+
     /* Text */
     color: #919191;
-    background-color: var(--background-form-user);
-    border: none;
 }
 
 .custom-select select {
@@ -268,14 +267,14 @@ img::before {
     background-color:#D8D8D8;
   }
   
-  img::after {  
-    content: url("../img/play.png");
-    display: block;
-    position: absolute;
-    background-color: #D8D8D8;
-    top: 12px;
-    left: 12px;
-    width: 100%;
-    
-  }
+img::after {
+content: url("../img/play.png");
+display: block;
+position: absolute;
+background-color: #D8D8D8;
+top: 12px;
+left: 12px;
+width: 100%;
+
+}
 

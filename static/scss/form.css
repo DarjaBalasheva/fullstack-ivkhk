@@ -220,7 +220,7 @@ div.confirm-pass-form {
     height: 68px;
     left: calc(50% - 414px/2 - 325px);
     top: 45px;
-    background: var(--background-form-userbackground-form-user);
+    background: var(--background-form-user);
     border: var(--color-border-grey);
     border-radius: var(--border-radius-primary);
 }
@@ -314,3 +314,7 @@ div.btn7-index {
     left: calc(50% - 110px/2 + 60px);
     top: 38px;
 }
+
+
+
+
