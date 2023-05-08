@@ -10,8 +10,8 @@ flake8 = "*"
 autoflake = "*"
 pre-commit = "*"
 marshmallow = "*"
-
-
+mysql-connector-python = "*"
+python-dotenv = "*"
 
 
 [dev-packages]
