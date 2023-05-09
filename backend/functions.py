@@ -42,13 +42,7 @@ def find_project(student_dict, uuid):
 def dict_create(tuple_):
   dict_lict = []
   for row in tuple_:
-    dict_ = {
-      "uuid": row[0],
-      'project': row[1],
-      'typeproject': row[3],
-      'group': row[4],
-      'name': row[5] + " " + row[6],
-    }
-    dict_lict.append(dict_)
+    row = dict(row)
+    dict_lict.append(row)
   return dict_lict
 

@@ -21,18 +21,18 @@
     {% for result in results %}
         <div class="string">
             <div class="nimi">
-                <h3 class="result"><a href="{{server}}/result?message={{result.name}}&key=name">{{result.name}}</a></h3>
+                <h3 class="result"><a href="{{server}}/result?message={{result.first_name}} {{result.last_name}}&key=name">{{result.first_name}} {{result.last_name}}</a></h3>
             </div>
             <div class="group">
-                <h3 class="result"><a href="{{server}}/result?message={{result.group}}&key=group">{{result.group}}</a></h3>
+                <h3 class="result"><a href="{{server}}/result?message={{result.group_}}&key=group_">{{result.group_}}</a></h3>
             </div>
             <div class="project">
 
-                <h3 class="result"><a href="{{server}}/project?project={{result.project}}&uuid={{result.uuid}}">{{result.project}}</a></h3>
+                <h3 class="result"><a href="{{server}}/project?project={{result.project_name}}&uuid={{result.student_uuid}}">{{result.project_name}}</a></h3>
 
             </div>
             <div class="type">
-                <h3 class="result"><a href="{{server}}/result?message={{result.typeproject}}&key=typeproject">{{result.typeproject}}</a></h3>
+                <h3 class="result"><a href="{{server}}/result?message={{result.type_}}&key=type_">{{result.type_}}</a></h3>
 
             </div>
             
