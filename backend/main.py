@@ -18,6 +18,7 @@ app = FastAPI()
 app.db = connect()
 
 app.mount("/static", StaticFiles(directory="../static"), name="static")
+
 templates = Jinja2Templates(directory="../templates")
 
 
@@ -99,10 +100,13 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                 WHERE {key} LIKE %s '''
                 cursor.execute(sql, (message+'%',))
                 result = dict_create(cursor.fetchall())
+                print(result[0]['student_uuid'])
                 # uuid = result[0]['student_uuid']
-                # uuid: str = bytes.decode(uuid, 'utf-8')
+                # print(uuid)
+                # print(type(uuid))
+                # uuid: str = uuid.decode('utf-8')
                 # result[0]['student_uuid'] = uuid
-                print(type(result[0]['student_uuid']))
+                # print(type(result[0]['student_uuid']))
             except KeyError:
                 return templates.TemplateResponse("notFound.html",
                     {
@@ -170,10 +174,9 @@ async def project_page(
 WHERE students.student_uuid = %s'''
 
     if project and uuid:
-        # uuid = base64.b64encode(uuid)
         cursor.execute(sql, (uuid, ))
         result = dict_create(cursor.fetchall())
-
+        print
         # result = find_project(students_dict, uuid)
         if not result:
             return templates.TemplateResponse("notFound.html",
