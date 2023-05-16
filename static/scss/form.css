@@ -124,8 +124,9 @@ div.project {
     top: calc(50% - 48px/2);
     display: flex;
     align-items: center;
-
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 div.type {
@@ -236,7 +237,7 @@ div.content-form {
 div.content-form.project-page {
     position: absolute;
     width: 258px;
-    height: 316px;
+    height: 258px;
     left: 0;
     top: 0;
 

@@ -232,6 +232,9 @@ div.project.project-page {
     text-align: left;
     color: var(--color-text);
     border: none;
+    white-space: normal;
+    overflow: initial;
+    text-overflow: clip;
 }
 
 div.type.project-page {
@@ -239,7 +242,7 @@ div.type.project-page {
     width: 246px;
     height: 29px;
     left: calc(50% - 246px/2 - 84px);
-    top: 146px;
+    top: 166px;
     font-size: var(--font-size-second);
     text-align: left;
     color: var(--color-text);
