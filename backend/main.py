@@ -17,6 +17,9 @@ app = FastAPI()
 app.db = connect()
 
 app.mount("/static", StaticFiles(directory="../static"), name="static")
+
+app.mount("/Users", StaticFiles(directory="/Users"), name="media")
+
 templates = Jinja2Templates(directory="../templates")
 
 
@@ -31,46 +34,84 @@ def home(request: Request):
 async def read_items(request: Request, message: Union[str, None] = Query(default=None), key: Union[str, None] = Query(default=None)):
     conn = request.app.db
     cursor = conn.cursor()
-    if message:
-        if key:
-            if key == 'all':
-                # cursor.execute("SELECT * FROM medias")
-                result = find_everyone(students_dict, message)
-            elif key == 'top':
-                result = find_better(students_dict, message)
-            else:
-                try:
-                    sql = f'''SELECT  project_info.project_uuid, project_info.project_name, project_info.year_, 
-                    type_list.type_, group_list.group_, students.first_name, students.last_name FROM
-                           project_info 
+    if message and key:
+        if key == 'all':
+            # cursor.execute("SELECT * FROM medias")
+            result = find_everyone(students_dict, message)
+        elif key == 'top':
+            result = find_better(students_dict, message)
+        elif key == 'name':
+            try:
+                message
+                sql = f'''SELECT  project_info.project_uuid, project_info.project_name, project_info.year_, 
+                type_list.type_, group_list.group_, students.first_name, students.last_name
+
+                FROM project_info
+
+                JOIN type_list ON type_list.type_uuid = project_info.type_uuid
+                JOIN group_list ON group_list.group_uuid = project_info.group_uuid
+                JOIN students ON students.project_uuid = project_info.project_uuid
+
+                WHERE first_name LIKE %s OR last_name LIKE %s OR first_name + ' ' + last_name LIKE %s OR last_name + ' ' + first_name LIKE %s'''
+                cursor.execute(sql, (message + '%', message + '%',  message + '%', message + '%'))
+                result = dict_create(cursor.fetchall())
+                print(message)
+            except KeyError:
+                return templates.TemplateResponse("notFound.html",
+                                                  {
+                                                      "request": request,
+                                                      "title": "Not Found",
+                                                  },
+                                                  status_code=404)
+        else:
+            try:
+                sql = f'''SELECT  project_info.project_uuid, project_info.project_name, project_info.year_, 
+                type_list.type_, group_list.group_, students.first_name, students.last_name FROM
+                       project_info 
 JOIN type_list ON type_list.type_uuid = project_info.type_uuid
 JOIN group_list ON group_list.group_uuid = project_info.group_uuid
 JOIN students ON students.project_uuid = project_info.project_uuid
-                    WHERE {key} = %s'''
-                    cursor.execute(sql, (message,))
-                    result = dict_create(cursor.fetchall())
-                except KeyError:
-                    return templates.TemplateResponse("notFound.html",
-                        {
-                            "request": request,
-                            "title": "Not Found",
-                        },
-                    status_code=404)
-    else:
-            if key == 'top':
-                result = find_all_better(students_dict)
-            else:
-                sql = f'''SELECT  project_info.project_uuid, project_info.project_name, project_info.year_, 
-                                    type_list.type_, group_list.group_, students.first_name, students.last_name FROM
-                                           project_info 
-                JOIN type_list ON type_list.type_uuid = project_info.type_uuid
-                JOIN group_list ON group_list.group_uuid = project_info.group_uuid
-                JOIN students ON students.project_uuid = project_info.project_uuid'''
-
-                cursor.execute(sql)
+                WHERE {key} = %s'''
+                cursor.execute(sql, (message,))
                 result = dict_create(cursor.fetchall())
+            except KeyError:
+                return templates.TemplateResponse("notFound.html",
+                    {
+                        "request": request,
+                        "title": "Not Found",
+                    },
+                    status_code=404)
+    elif not message and key == 'top':
+        try:
+            result = find_all_better(students_dict)
+        except KeyError:
+            return templates.TemplateResponse("notFound.html",
+                                              {
+                                                  "request": request,
+                                                  "title": "Not Found",
+                                              },
+                                              status_code=404)
 
-    
+    else:
+        try:
+            sql = f'''SELECT project_info.project_uuid, project_info.project_name, project_info.year_, 
+                                type_list.type_, group_list.group_, students.first_name, students.last_name FROM
+                                       project_info 
+            JOIN type_list ON type_list.type_uuid = project_info.type_uuid
+            JOIN group_list ON group_list.group_uuid = project_info.group_uuid
+            JOIN students ON students.project_uuid = project_info.project_uuid'''
+
+            cursor.execute(sql)
+            result = dict_create(cursor.fetchall())
+            print(result)
+        except KeyError:
+            return templates.TemplateResponse("notFound.html",
+                {
+                    "request": request,
+                    "title": "Not Found",
+                },
+            status_code=404)
+
     if not result:
         return templates.TemplateResponse("notResult.html", {
             "request": request,
@@ -89,8 +130,6 @@ JOIN students ON students.project_uuid = project_info.project_uuid
                 "title": "Result",
             },
         )
-
-
 
 @app.get("/result", response_class=HTMLResponse, status_code=500)
 async def response_page(request: Request, message: Union[str, None] = Query(default=None), key: Union[str, None] = Query(default=None)):
