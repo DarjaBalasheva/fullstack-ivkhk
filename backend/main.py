@@ -10,7 +10,6 @@ from fastapi.templating import Jinja2Templates
 from functions import *
 from db_connect import connect
 import base64
-import json
 
 
 
@@ -81,6 +80,7 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                 cursor.execute(sql, (message + '%', message + '%', '%' + message, '%' + message + '%'))
 
                 result = dict_create(cursor.fetchall())
+
             except KeyError:
                 return templates.TemplateResponse("notFound.html",
                                                   {
@@ -146,7 +146,6 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
             },
         )
 
-
 @app.get("/result", response_class=HTMLResponse, status_code=500)
 async def response_page(request: Request, message: Union[str, None] = Query(default=None), key: Union[str, None] = Query(default=None)):
     return templates.TemplateResponse("notResult.html", {
@@ -199,3 +198,4 @@ async def project_page(
             "project.html",
             {"request": request, "result": result, "medias": medias, "title": "Project page"},
         )
+

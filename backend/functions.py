@@ -52,3 +52,4 @@ def create_media_list(file_dict):
       file_list.append(file_dict[f'app_{i}'])
   return file_list
 
+
