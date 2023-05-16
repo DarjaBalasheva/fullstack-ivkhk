@@ -19,6 +19,8 @@ app.db = connect()
 
 app.mount("/static", StaticFiles(directory="../static"), name="static")
 
+app.mount("/Users", StaticFiles(directory="/Users"), name="media")
+
 templates = Jinja2Templates(directory="../templates")
 
 
