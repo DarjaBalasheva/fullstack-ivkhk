@@ -9,7 +9,6 @@ from fastapi.templating import Jinja2Templates
 
 from functions import *
 from db_connect import connect
-import base64
 
 
 
