@@ -124,8 +124,9 @@ div.project {
     top: calc(50% - 48px/2);
     display: flex;
     align-items: center;
-
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 div.type {
@@ -236,7 +237,7 @@ div.content-form {
 div.content-form.project-page {
     position: absolute;
     width: 258px;
-    height: 316px;
+    height: 258px;
     left: 0;
     top: 0;
 
@@ -249,7 +250,7 @@ div.second-content {
     width: 258px;
     height: 48px;
     left: 0;
-    top: 268px; 
+    top: 268px;
 }
 
 
@@ -271,7 +272,7 @@ div.btn-index-type {
     border: 1px solid var(--color-button-typeproject);
     border-radius: 40px;
     background: none;
-    display: flex;    
+    display: flex;
 
 }
 
@@ -314,7 +315,6 @@ div.btn7-index {
     left: calc(50% - 110px/2 + 60px);
     top: 38px;
 }
-
 
 
 

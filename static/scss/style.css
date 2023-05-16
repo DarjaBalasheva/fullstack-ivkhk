@@ -256,25 +256,23 @@ select {
     border: none;
 }
 
-img::before {  
+img::before {
     content: " ";
     display: block;
     position: absolute;
-    top: -10px;
+    top: 0;
     left: 0;
-    height: calc(100% + 10px);
+    height: 100%;
     width: 100%;
-    background-color:#D8D8D8;
+    background-color:#FFFEFB;
   }
-  
+
 img::after {
-content: url("../img/play.png");
-display: block;
-position: absolute;
-background-color: #D8D8D8;
-top: 12px;
-left: 12px;
-width: 100%;
+    content: url("../img/play.png");
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+
 
 }
-
