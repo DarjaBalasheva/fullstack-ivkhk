@@ -114,24 +114,6 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                 status_code=404)
 
 
-    # else:
-    #     try:
-    #         sql = f'''SELECT project_info.project_uuid, project_info.project_name, project_info.year_,
-    #                             type_list.type_, group_list.group_, students.* FROM
-    #                                    project_info
-    #         JOIN type_list ON type_list.type_uuid = project_info.type_uuid
-    #         JOIN group_list ON group_list.group_uuid = project_info.group_uuid
-    #         JOIN students ON students.project_uuid = project_info.project_uuid'''
-    #         cursor.execute(sql, (message + '%',))
-    #         result = dict_create(cursor.fetchall())
-    #     except KeyError:
-    #         return templates.TemplateResponse("notFound.html",
-    #                                           {
-    #                                               "request": request,
-    #                                               "title": "Not Found",
-    #                                           },
-    #                                           status_code=404)
-
     elif key == 'top' and not message:
         result = find_all_better(students_dict)
     elif not message:
