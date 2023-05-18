@@ -236,8 +236,11 @@ div.content-form {
 
 div.content-form.project-page {
     position: absolute;
-    width: 258px;
-    height: 258px;
+    width: 256px;
+    height: 256px;
+    border: 0.5px;
+    border-style: solid;
+    border-color: #919191;
     left: 0;
     top: 0;
 
