@@ -173,6 +173,7 @@ a {
     color: var(--color-text);
     background-color: transparent;
     text-decoration: none;
+
 }
 
 
@@ -206,11 +207,8 @@ a.index, a.content {
 }
 
 img.primary{
-    height: 258px;
-    width: 258px;
-    border: 1px;
-    object-fit:cover;
-    border-color: var(--color-border-grey);
+    height: 256px;
+    width: 256px;
     cursor: pointer;
 }
 
@@ -222,9 +220,10 @@ img.second {
     left: calc(50% - 48px/2 + 105px);
     height: 48px;
     width: 48px;
-    border: 1px;
     object-fit:cover;
-    border-color: var(--color-border-grey);
+    border: 0.5px;
+    border-style: solid;
+    border-color: #919191;
 }
 
 
@@ -256,7 +255,7 @@ select {
     border: none;
 }
 
-img::before {
+img.primary::before {
     content: " ";
     display: block;
     position: absolute;
@@ -264,16 +263,33 @@ img::before {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color:#FFFEFB;
+    background-color: #fff;
   }
 
-img::after {
-    content: url("../img/play.png");
+img.primary::after {
+    content: url("../img/multimedia-green_tp.png");
     display: block;
     position: absolute;
-    top: 45%;
-    left: 47%;
-
-
+    top: 0;
+    left: 0;
 }
+
+img.second::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100% ;
+    background-color:#fff;
+  }
+
+img.second::after {
+    content: url("../img/multimedia-48.png");
+    display: block;
+    position: absolute;
+    top: 0%
+}
+
 
