@@ -37,6 +37,10 @@ button.search {
     background: var(--color-primary-first);
 }
 
+button.search:hover {
+    background: var(--color-button-hover-first);
+}
+
 button.add-btn {
     position: absolute;
     width: 196px;
@@ -224,7 +228,7 @@ div.year.project-page {
 
 div.project.project-page {
     position: absolute;
-    width: 530px;
+    width: 736px;
     height: 50px;
     left: calc(50% - 530px/2 + 58px);
     top: 96px;
@@ -238,16 +242,15 @@ div.project.project-page {
 }
 
 div.type.project-page {
-    position: absolute;
+    position: relative;
     width: 246px;
     height: 29px;
     left: calc(50% - 246px/2 - 84px);
-    top: 166px;
+    top: 146px;
     font-size: var(--font-size-second);
     text-align: left;
     color: var(--color-text);
-
-
+    margin-top: 10px;
 }
 
 button.remove {

@@ -8,7 +8,7 @@
             <h2 class="title">Eesnimi Perekonanimi</h2>
         </div>
         <div class="group">
-            <h2 class="title">Rühm</h2>
+            <h2 class="title">Rühm · Aastad</h2>
         </div>
         <div class="project">
             <h2 class="title">Lõpotööd Nimetus</h2>
@@ -24,7 +24,8 @@
                 <h3 class="result"><a href="{{server}}/result?message={{result.first_name}} {{result.last_name}}&key=name">{{result.first_name}} {{result.last_name}}</a></h3>
             </div>
             <div class="group">
-                <h3 class="result"><a href="{{server}}/result?message={{result.group_}}&key=group_">{{result.group_}}</a></h3>
+                <h3 class="result"><a href="{{server}}/result?message={{result.group_}}&key=group_">{{result.group_}}</a> · <a href="{{server}}/result?message={{result.year_}}&key=year_">{{result.year_}}</a>
+                </h3>
             </div>
             <div class="project">
 

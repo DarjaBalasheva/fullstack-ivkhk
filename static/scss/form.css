@@ -95,23 +95,24 @@ div.string {
 div.nimi {
     position: absolute;
     height: 48px;
-    left: 0%;
-    right: 70.96%;
-    top: calc(50% - 48px/2);
+    left: 12px;
+    top: 0px;
     display: flex;
     align-items: center;
-
 
 }
 
 div.group {
     position: absolute;
     height: 48px;
-    width: 109px;
-    left: calc(50% - 109px/2 - 152.5px);
+    width: 172px;
+    left: 304px;
     top: calc(50% - 48px/2);
     display: flex;
     align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
 
 }
@@ -120,7 +121,7 @@ div.project {
     position: absolute;
     height: 48px;
     width: 358px;
-    left: calc(50% - 358px/2 + 130px);
+    left: calc(50% - 360px/2 + 168px);
     top: calc(50% - 48px/2);
     display: flex;
     align-items: center;
@@ -133,7 +134,7 @@ div.type {
     position: absolute;
     height: 48px;
     width: 187px;
-    left: calc(50% - 187px/2 + 428.5px);
+    left: calc(50% - 144px/2 + 451px);
     top: calc(50% - 48px/2);
     display: flex;
     align-items: center;
@@ -251,11 +252,17 @@ div.content-form.project-page {
 div.second-content {
     position: absolute;
     width: 258px;
-    height: 48px;
     left: 0;
     top: 268px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
+div.container {
+    width: 100vw;
+    display: inline-block;
+}
 
 div.project-form {
     position: absolute;
