@@ -34,7 +34,7 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
     conn = request.app.db
     cursor = conn.cursor()
     cursor = conn.cursor(dictionary=True)
-
+    message = message.lower()
     if message and key:
         if key == 'all':
             try:
@@ -47,13 +47,15 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                 JOIN group_list ON group_list.group_uuid = project_info.group_uuid
                 JOIN students ON students.project_uuid = project_info.project_uuid
 
-                WHERE first_name LIKE %s OR last_name LIKE %s
-                    OR group_ LIKE %s
-                    OR year_ LIKE %s
-                    OR type_ LIKE %s'''
-                cursor.execute(sql, (message + '%', message + '%', message + '%',message + '%',message + '%'))
+                WHERE LOWER(group_) LIKE %s
+                    OR LOWER(year_) LIKE %s
+                    OR LOWER(type_) LIKE %s
+                    OR LOWER(first_name) LIKE %s 
+                    OR LOWER(last_name) LIKE %s 
+                    OR CONCAT(LOWER(first_name), ' ', LOWER(last_name)) LIKE %s 
+                    OR CONCAT(LOWER(last_name), ' ', LOWER(first_name)) LIKE %s'''
+                cursor.execute(sql, (message + '%', message + '%', message + '%', message + '%', message + '%', '%' + message, '%' + message + '%'))
                 result = dict_create(cursor.fetchall())
-                print(result)
             except KeyError:
                 return templates.TemplateResponse("notFound.html",
                                                   {
@@ -62,7 +64,25 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                                                   },
                                                   status_code=404)
         elif key == 'top':
-            result = find_better(students_dict, message)
+            sql = f'''SELECT  project_info.project_uuid, project_info.project_name, project_info.year_, project_info.is_best,
+                type_list.type_, group_list.group_, students.first_name, students.last_name, students.student_uuid
+
+                FROM project_info
+
+                JOIN type_list ON type_list.type_uuid = project_info.type_uuid
+                JOIN group_list ON group_list.group_uuid = project_info.group_uuid
+                JOIN students ON students.project_uuid = project_info.project_uuid
+
+                WHERE LOWER(group_) LIKE %s
+                    OR LOWER(year_) LIKE %s
+                    OR LOWER(type_) LIKE %s
+                    OR LOWER(first_name) LIKE %s 
+                    OR LOWER(last_name) LIKE %s 
+                    OR CONCAT(LOWER(first_name), ' ', LOWER(last_name) LIKE %s 
+                    OR CONCAT(LOWER(last_name), ' ', LOWER(first_name)) LIKE %s)
+                    AND is_best = 1'''
+            cursor.execute(sql, (message + '%', message + '%', message + '%', message + '%', message + '%', '%' + message, '%' + message + '%'))
+            result = dict_create(cursor.fetchall())
         elif key == 'name':
             try:
                 message
@@ -75,9 +95,11 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                 JOIN group_list ON group_list.group_uuid = project_info.group_uuid
                 JOIN students ON students.project_uuid = project_info.project_uuid
 
-                WHERE first_name LIKE %s OR last_name LIKE %s OR CONCAT(first_name, ' ', last_name) LIKE %s OR CONCAT(last_name, ' ', first_name) LIKE %s'''
+                WHERE LOWER(first_name) LIKE %s 
+                OR LOWER(last_name) LIKE %s 
+                OR CONCAT(LOWER(first_name), ' ', LOWER(last_name)) LIKE %s 
+                OR CONCAT(LOWER(last_name), ' ', LOWER(first_name)) LIKE %s'''
                 cursor.execute(sql, (message + '%', message + '%', '%' + message, '%' + message + '%'))
-
                 result = dict_create(cursor.fetchall())
 
             except KeyError:
@@ -98,11 +120,10 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                 JOIN group_list ON group_list.group_uuid = project_info.group_uuid
                 JOIN students ON students.project_uuid = project_info.project_uuid
                 
-                WHERE {key} LIKE %s '''
+                WHERE LOWER({key}) LIKE %s '''
                 cursor.execute(sql, (message+'%',))
-
                 result = dict_create(cursor.fetchall())
-                print(result[0]['student_uuid'])
+                print(result)
 
             except KeyError:
                 return templates.TemplateResponse("notFound.html",
@@ -114,7 +135,19 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
 
 
     elif key == 'top' and not message:
-        result = find_all_better(students_dict)
+        sql = f'''SELECT  project_info.project_uuid, project_info.project_name, project_info.year_, project_info.is_best,
+                        type_list.type_, group_list.group_, students.first_name, students.last_name, students.student_uuid
+
+                        FROM project_info
+
+                        JOIN type_list ON type_list.type_uuid = project_info.type_uuid
+                        JOIN group_list ON group_list.group_uuid = project_info.group_uuid
+                        JOIN students ON students.project_uuid = project_info.project_uuid
+
+                        WHERE is_best = 1'''
+        cursor.execute(sql)
+        result = dict_create(cursor.fetchall())
+        print(result)
     elif not message:
         sql = f'''SELECT  students.student_uuid, project_info.project_name, project_info.year_, 
                             type_list.type_, group_list.group_, students.first_name, students.last_name FROM
@@ -183,6 +216,13 @@ async def project_page(
                             "title": "Not Found",
                         },
                     status_code=404)
+        except IndexError:
+            return templates.TemplateResponse("notFound.html",
+                                              {
+                                                  "request": request,
+                                                  "title": "Not Found",
+                                              },
+                                              status_code=404)
 
     if not result:
         return templates.TemplateResponse("notFound.html",
