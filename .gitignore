@@ -2,5 +2,6 @@ backend/__pycache__/
 __pycache__/
 venv/
 node_modules/
-.env
+backend/.env
+.DS_Store
 
