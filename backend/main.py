@@ -1,8 +1,6 @@
 from typing import Union
 
-from data import students_dict, domen, key_search
-
-from fastapi import FastAPI, Request, Query, HTTPException
+from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -10,10 +8,11 @@ from fastapi.templating import Jinja2Templates
 from functions import *
 from db_connect import connect
 
-
+from os import environ
 
 app = FastAPI()
 app.db = connect()
+domen = environ["domen"]
 
 app.mount("/static", StaticFiles(directory="../static"), name="static")
 
