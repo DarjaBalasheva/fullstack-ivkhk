@@ -244,24 +244,17 @@ div.content-form.project-page {
     border-color: #919191;
     left: 0;
     top: 0;
-
-
-
 }
 
 div.second-content {
     position: absolute;
     width: 258px;
+    height: auto;
     left: 0;
     top: 268px;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-}
-
-div.container {
-    width: 100vw;
-    display: inline-block;
 }
 
 div.project-form {

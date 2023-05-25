@@ -11,15 +11,21 @@
 
 
             <div class="content-form project-page">
-                <a class="conent" href="{{result.app_1}}" target="_blank"><img class="primary" src="{{result.app_1}}"></a>
+                <a class="primary" href="{{result.app_1}}" target="_blank">
+                    <object data="{{result.app_1}}" type="application/octet-stream">
+                        <img class="notloadp primary-content" src="{{result.app_1}}">
+                    </object>
+                </a>
 
 
             <div class="second-content">
-            <div class="container">
                 {% for media in medias %}
-                <object><a class="content" href="{{media}}" target="_blank"><img class="second" src="{{media}}"></a></object>
+                <a class="second" href="{{media}}" target="_blank">
+                    <object data="{{media}}" type="application/octet-stream">
+                        <img class="notloads second-content" src="{{media}}">
+                    </object>
+                </a>
                 {% endfor %}
-            </div>
             </div>
         </div>
     </div>
