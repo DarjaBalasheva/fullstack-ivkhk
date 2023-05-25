@@ -50,7 +50,7 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                     OR LOWER(year_) LIKE %s
                     OR LOWER(type_) LIKE %s
                     OR LOWER(first_name) LIKE %s 
-                    OR LOWER(last_name) LIKE %s 
+                    OR LOWER(last_name) LIKE %s
                     OR CONCAT(LOWER(first_name), ' ', LOWER(last_name)) LIKE %s 
                     OR CONCAT(LOWER(last_name), ' ', LOWER(first_name)) LIKE %s'''
                 cursor.execute(sql, (message + '%', message + '%', message + '%', message + '%', message + '%', '%' + message, '%' + message + '%'))
@@ -72,13 +72,13 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                 JOIN group_list ON group_list.group_uuid = project_info.group_uuid
                 JOIN students ON students.project_uuid = project_info.project_uuid
 
-                WHERE LOWER(group_) LIKE %s
+                WHERE (LOWER(group_) LIKE %s
                     OR LOWER(year_) LIKE %s
                     OR LOWER(type_) LIKE %s
                     OR LOWER(first_name) LIKE %s 
-                    OR LOWER(last_name) LIKE %s 
+                    OR LOWER(last_name) LIKE %s
                     OR CONCAT(LOWER(first_name), ' ', LOWER(last_name) LIKE %s 
-                    OR CONCAT(LOWER(last_name), ' ', LOWER(first_name)) LIKE %s)
+                    OR CONCAT(LOWER(last_name), ' ', LOWER(first_name)) LIKE %s))
                     AND is_best = 1'''
             cursor.execute(sql, (message + '%', message + '%', message + '%', message + '%', message + '%', '%' + message, '%' + message + '%'))
             result = dict_create(cursor.fetchall())
