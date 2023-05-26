@@ -10,7 +10,7 @@ jobs:
       - name: "Print hello testing"
         run: echo "hello, its testing"
   prod_deployment:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: "Print hello prod"
         run: echo "hello, its prod"
