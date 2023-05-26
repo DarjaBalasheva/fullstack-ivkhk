@@ -15,5 +15,7 @@ jobs:
     steps:
       - name: "Print hello prod"
         run: echo "hello, its prod"
+      - name: "Git clone"
+        uses: actions/checkout@v1
       - name: "Print files in directory"
         run: ls -la
