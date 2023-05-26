@@ -1,0 +1,16 @@
+name: "My GitHub Actions"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  testing:
+    runs-on: macos-latest
+    steps: 
+      - name: "Print hello testing"
+        run: echo "hello, its testing"
+  prod_deployment:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: "Print hello prod"
+        run: echo "hello, its prod"
