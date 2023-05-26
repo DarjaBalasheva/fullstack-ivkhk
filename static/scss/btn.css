@@ -7,6 +7,7 @@ button{
     font-weight: var(--font-weight-primary);
 }
 
+/* Select style */
 drop-btn {
     position: absolute;
     width: 116px;
@@ -23,6 +24,7 @@ drop-btn {
     border: none;
 }
 
+/* Button for input field */
 button.search {
     position: absolute;
     width: 48px;
@@ -41,257 +43,55 @@ button.search:hover {
     background: var(--color-button-hover-first);
 }
 
-button.add-btn {
-    position: absolute;
-    width: 196px;
-    height: 42px;
-    font-size: var(--font-size-second);
-    text-align: center;
-    color: var(--background-form-user);
-    border: none;
-    background: var(--color-primary-first);
-    border-radius: 40px;
-
-}
-
-button.add-btn:hover {
-background: var(--color-button-hover-first);
-
-}
-
-button.add-btn-index {
-    left: calc(50% - 196px/2);
-    top: 625px;
-}
-
-button.add-btn-result {
-    left: calc(50% - 196px/2 + 434px);
-    top: 205px;
-}
-
-button.login-btn {
-    position: absolute;
-width: 150px;
-height: 42px;
-left: calc(50% - 150px/2);
-top: 495px;
-font-size: var(--font-size-second);
-text-align: center;
-color: var(--background-form-user);
-background: var(--color-primary-second);
-border-radius: 40px;
-border: none;
-}
-
-
-button.login-btn:hover {
-    background: var(--color-button-hover-second);
-
-
-}
-
-button.add-project-file {
+/* Type project buttons. Index page */
+div.btn-index-type {
     box-sizing: border-box;
     position: absolute;
-    width: 355px;
+    width: 110px;
     height: 28px;
-    right: 0;
-    border: 1px solid #919191;
-    background-color: var(--color-background-admin);
+    font-size: 13px;
+    line-height: 17px;
+    border: 1px solid var(--color-button-typeproject);
     border-radius: 40px;
+    background: none;
+    display: flex;
 }
 
-button.add-project-file.btn1 {
+div.btn-index-type:hover {
+    background-color: var(--color-button-typeproject);
+}
+
+div.btn1-index {
+    left: calc(50% - 110px/2 - 241px);
     top: 0;
 }
 
-button.add-project-file.btn2 {
+div.btn2-index {
+    left: calc(50% - 110px/2 - 121px);
+    top: 0;
+}
+
+div.btn3-index {
+    left: calc(50% - 110px/2);
+    top: 0;
+}
+
+div.btn4-index {
+    left: calc(50% - 110px/2 + 120px);
+    top: 0;
+}
+
+div.btn5-index {
+    left: calc(50% - 110px/2 + 240px);
+    top: 0;
+}
+
+div.btn6-index {
+    left: calc(50% - 110px/2 - 60px);
     top: 38px;
 }
 
-button.save-project{
-    position: absolute;
-    width: 150px;
-    height: 42px;
-    right:0;
-    bottom: 0;
-    font-size: var(--font-size-third);
-    text-align: center;
-    color: var(--background-form-user);
-    background: var(--color-primary-second);
-    border-radius: 40px;
-    border: none;
-}
-
-button.save-project:hover {
-    background: var(color-button-hover-second);
-}
-
-button.save-project-and-create-new{
-    position: absolute;
-    width: 195px;
-    height: 42px;
-    left: calc(50% - 195px/2 + 274.5px);
-    bottom: 0;
-    font-size: var(--font-size-third);
-    text-align: center;
-    color: var(--background-form-user);
-    background: #919191;
-    border-radius: 40px;
-    border: none;
-}
-
-button.save-project-and-create-new:hover{
-    background: #6F6F6F;
-}
-
-button.delete-project {
-    position: absolute;
-    width: 193px;
-    height: 42px;
-    left: calc(50% - 193px/2 - 325.5px);
-    top: 143px;
-    font-size: var(--font-size-third);
-    text-align: center;
-    color: var(--background-form-user);
-    background: var(--color-primary-first);
-    border-radius: 40px;
-    border: none;
-}
-
-button.nimi.delete-page {
-    position: absolute;
-    width: 206px;
-    height: 23px;
-    left: calc(50% - 206px/2 + 212px);
-    top: 0;
-    font-size: 14px;
-    text-align: right;
-    color: var(--color-text);
-    background-color:  var(--color-background-admin);
-    border: none;
-}
-
-button.year.delete-page {
-    position: absolute;
-    inset: 12.43% 20.39% 78.38% 65.41%;
-    font-size: 8px;
-    text-align: right;
-    color: var(--color-text);
-    background-color:  var(--color-background-admin);
-    border: none;
-}
-
-button.project.delete-page {
-    position: absolute;
-    inset: 31.89% 20.39% 51.89% 49.15%;
-    font-style: normal;
-    font-size: 22px;
-    text-align: right;
-    color: var(--color-text);
-    letter-spacing: var(--letter-spacing-primary);
-    background-color:  var(--color-background-admin);
-    border: none;
-}
-
-button.type-delete-page {
-    position: absolute;
-    inset: 48.11% 20.39% 42.16% 65.41%;
-    font-size: 8px;
-    text-align: right;
-    color: var(--color-text);
-    background-color:  var(--color-background-admin);
-    border: none;
-}
-
-div.nimi.project-page {
-    position: absolute;
-    width: 336px;
-    height: 27px;
-    left: calc(50% - 336px/2 - 39px);
-    top: 0;
-    font-size: var(--font-size-primary);
-    text-align: left;
-    color: var(--color-text);
-
-}
-
-div.year.project-page {
-    position: absolute;
-    width: 246px;
-    height: 23px;
-    left: calc(50% - 246px/2 - 84px);
-    top: 43px;
-    text-align: left;
-    color: var(--color-text);
-}
-
-div.project.project-page {
-    position: absolute;
-    width: 736px;
-    height: 50px;
-    left: calc(50% - 530px/2 + 58px);
-    top: 96px;
-    font-size: 32px;
-    text-align: left;
-    color: var(--color-text);
-    border: none;
-    white-space: normal;
-    overflow: initial;
-    text-overflow: clip;
-}
-
-div.type.project-page {
-    position: relative;
-    width: 246px;
-    height: 29px;
-    left: calc(50% - 246px/2 - 84px);
-    top: 146px;
-    font-size: var(--font-size-second);
-    text-align: left;
-    color: var(--color-text);
-    margin-top: 10px;
-}
-
-button.remove {
-    position: absolute;
-    width: 110px;
-    height: 28px;
-    left: 457px;
-    top: 275px;
-    font-size: var(--font-size-third);
-    text-align: center;
-    color: var(--background-form-user);
-    background: var(--color-primary-first);
-    border-radius: 40px;
-    border: none;
-
-}
-
-button.remove:hover {
-        background: var(--color-button-hover-first);
-
-}
-
-button.edit {
-    position: absolute;
-    width: 110px;
-    height: 28px;
-    left: 327px;
-    top: 275px;
-    font-size: var(--font-size-third);
-    text-align: center;
-    color: var(--background-form-user);
-    background: var(--color-primary-second);
-    border-radius: 40px;
-    border: none;
-}
-
-button.edit:hover {
-    background: var(--color-primary-second);
-}
-
-button.nimi.project-page.admin, button.project.project-page.admin, button.year.project-page.admin, button.type.project-page.admin {
-    background-color: var(--color-background-admin);
-
+div.btn7-index {
+    left: calc(50% - 110px/2 + 60px);
+    top: 38px;
 }

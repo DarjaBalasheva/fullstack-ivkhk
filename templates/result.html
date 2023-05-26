@@ -1,43 +1,58 @@
-{% extends "header.html" %}
+{% extends "header.html" %} <!-- Import header.html -->
 
-{% block content %} 
+{% block content %} <!-- Page content-->
     <h1 class="header">Tulemused</h1> 
 
+    <!-- Start list title -->
     <div class="title">
+
+        <!-- Title. Student name -->
         <div class="nimi">
             <h2 class="title">Eesnimi Perekonanimi</h2>
         </div>
+
+        <!-- Title. Group and year -->
         <div class="group">
             <h2 class="title">Rühm · Aastad</h2>
         </div>
+
+        <!-- Title. Project name -->
         <div class="project">
             <h2 class="title">Lõpotööd Nimetus</h2>
         </div>
+
+        <!-- Title. Type project -->
         <div class="type">
             <h2 class="title">Tüüp</h2>
         </div>
     </div>
-    
+    <!-- End list title -->
+
+    <!-- Result list -->
 {% for result in results %}
         <div class="string">
+
+            <!-- Student name -->
             <div class="nimi">
                 <h3 class="result"><a href="{{server}}/result?message={{result.first_name}} {{result.last_name}}&key=name">{{result.first_name}} {{result.last_name}}</a></h3>
             </div>
+
+            <!-- Student group and year -->
             <div class="group">
-                <h3 class="result"><a href="{{server}}/result?message={{result.group_}}&key=group_">{{result.group_}}</a> · <a href="{{server}}/result?message={{result.year_}}&key=year_">{{result.year_}}</a>
-                </h3>
+                <h3 class="result"><a href="{{server}}/result?message={{result.group_}}&key=group_">{{result.group_}}</a> · <a href="{{server}}/result?message={{result.year_}}&key=year_">{{result.year_}}</a></h3>
             </div>
+
+            <!-- Project name -->
             <div class="project">
-
                 <h3 class="result"><a href="{{server}}/project?project={{result.project_name}}&uuid={{result.student_uuid}}">{{result.project_name}}</a></h3>
-
             </div>
+
+            <!-- Type project -->
             <div class="type">
                 <h3 class="result"><a href="{{server}}/result?message={{result.type_}}&key=type_">{{result.type_}}</a></h3>
-
             </div>
-            
-            <div class="box"></div>
+
+            <div class="box"></div> <!-- Decor -->
         </div>
     {% endfor %}
 {% endblock %}

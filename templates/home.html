@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head lang="et">
+  <head lang="et"> <!-- Estonian language -->
     <meta charset="utf-8">
     <title>Multimedia projects</title>
 
+      <!-- Import CSS styles -->
     <link href="/static/scss/style.css" rel="stylesheet" type="text/css">
     <link href="/static/fonts/icomoon/style.css" rel="stylesheet" type="text/css">
     <link href="/static/scss/btn.css" rel="stylesheet" type="text/css">
@@ -16,7 +17,7 @@
 
     </header>
 
-
+    <!-- Start text input field -->
     <form class="form-search-index" action="/result" id="search">
 
       <div>
@@ -34,10 +35,11 @@
           <option value="top">paremik</option>
         </select>
     </div>
-
+            <!-- Search button for input field -->
         <button class="search"><img src="static/img/search-icon.png"></img></button>
-    </form>  
-    
+    </form>  <!-- End text input field -->
+
+    <!-- Buttons list with all projects type -->
     <div class="form-btn-type">
       <div class="btn-index-type btn1-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Animatsioon&key=type_">Animatsioon</a></p></div>
       <div class="btn-index-type btn2-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Helindamine&key=type_">Helindamine</a></p></div>
@@ -46,8 +48,6 @@
       <div class="btn-index-type btn5-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Video&key=type_">Video</a></p></div>
       <div class="btn-index-type btn6-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Veebiarendus&key=type_">Veebiarendus</a></p></div>
       <div class="btn-index-type btn7-index"><p class="projecttype"><a class="typeproject" href="{{server}}/result?message=Fototööd&key=type_">Fototööde</a></p></div>
-      
-
     </div>
   </body>
 

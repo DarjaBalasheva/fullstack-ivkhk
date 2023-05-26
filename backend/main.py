@@ -1,24 +1,23 @@
 from typing import Union
+from os import environ
 
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from functions import *
 from db_connect import connect
-
-from os import environ
+from functions import *
 
 app = FastAPI()
 app.db = connect()
 domen = environ["domen"]
 
 app.mount("/static", StaticFiles(directory="../static"), name="static")
-
 app.mount("/Users", StaticFiles(directory="/Users"), name="media")
 
 templates = Jinja2Templates(directory="../templates")
+
 
 
 @app.get("/home", response_class=HTMLResponse)
@@ -122,7 +121,6 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                 WHERE LOWER({key}) LIKE %s '''
                 cursor.execute(sql, (message+'%',))
                 result = dict_create(cursor.fetchall())
-                print(result)
 
             except KeyError:
                 return templates.TemplateResponse("notFound.html",
@@ -146,7 +144,7 @@ async def read_items(request: Request, message: Union[str, None] = Query(default
                         WHERE is_best = 1'''
         cursor.execute(sql)
         result = dict_create(cursor.fetchall())
-        print(result)
+
     elif not message:
         sql = f'''SELECT  students.student_uuid, project_info.project_name, project_info.year_, 
                             type_list.type_, group_list.group_, students.first_name, students.last_name FROM
@@ -204,9 +202,7 @@ async def project_page(
         try:
             cursor.execute(sql, (uuid,))
             result = dict_create(cursor.fetchall())[0]
-            print(result)
             medias = create_media_list(result)
-            print('******', medias)
 
         except KeyError:
             return templates.TemplateResponse("notFound.html",
@@ -236,4 +232,3 @@ async def project_page(
             "project.html",
             {"request": request, "result": result, "medias": medias, "title": "Project page"},
         )
-

@@ -8,6 +8,7 @@
     top: 69px;
 }
 
+/* Input field for Home page */
 .form-search-index {
     box-sizing: border-box;
     position: absolute;
@@ -17,8 +18,9 @@
     top: 379px;
     border: var(--color-border-grey);
     border-radius: var(--border-radius-primary);
-    }
+}
 
+/* Input field for header */
 .form-search-header {
     box-sizing: border-box;
     position: absolute;
@@ -31,57 +33,25 @@
     border-radius: var(--border-radius-primary);
 }
 
-form.input-add-project {
-    position: absolute;
-    width: 412px;
-    height: 45px;
-    background: var(--background-form-user);
-    border-radius: var(--border-radius-primary);
-}
-
-
+/* Type project buttons container */
 .form-btn-type {
     position: absolute;
     width: 630px;
     height: 66px;
     left: calc(50% - 630px/2);
     top: 481px;
-
 }
 
-.login-form {
-    box-sizing: border-box;
-    position: absolute;
-    width: 414px;
-    height: 68px;
-    left: calc(50% - 414px/2);
-    top: 316px;
-    background: var(--background-form-user);
-    border: var(--color-border-grey);
-    border-radius: var(--border-radius-primary);
-}
-
-.pass-form {
-    box-sizing: border-box;
-    position: absolute;
-    width: 414px;
-    height: 68px;
-    left: calc(50% - 414px/2);
-    top: 394px;
-    background: var(--background-form-user);
-    border: var(--color-border-grey);
-    border-radius: var(--border-radius-primary);
-}
-
+/* List title container. Result page */
 div.title {
     position: absolute;
     width: 1064px;
     height: 48px;
     left: calc(50% - 1064px/2);
     top: 326px;
-
 }
 
+/* Result string container. Result Page */
 div.string {
     position: relative;
     width: 1064px;
@@ -92,16 +62,17 @@ div.string {
     background: #FFFEFB;
 }
 
+/* Student name container. Result page */
 div.nimi {
     position: absolute;
     height: 48px;
     left: 12px;
-    top: 0px;
+    top: 0;
     display: flex;
     align-items: center;
-
 }
 
+/* Student group and year container. Result page */
 div.group {
     position: absolute;
     height: 48px;
@@ -113,10 +84,9 @@ div.group {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
-
 }
 
+/* Project name container. Result page */
 div.project {
     position: absolute;
     height: 48px;
@@ -130,6 +100,7 @@ div.project {
     text-overflow: ellipsis;
 }
 
+/* Type project container. Result page */
 div.type {
     position: absolute;
     height: 48px;
@@ -138,9 +109,9 @@ div.type {
     top: calc(50% - 48px/2);
     display: flex;
     align-items: center;
-
 }
 
+/* Decor container. Result page */
 div.box {
     position: absolute;
     width: 5px;
@@ -150,83 +121,7 @@ div.box {
 background: var(--color-primary-first);
 }
 
-div.add-project-form {
-    position: absolute;
-    width: 629px;
-    height: 45px;
-    left: 0;
-    display: flex;
-    align-items: center;
-}
-
-div.add-project-form.name {
-    top: 0;
-}
-
-div.add-project-form.group {
-    top: 56px;
-}
-
-div.add-project-form.project {
-    top: 110px;
-}
-
-div.add-project-form.type {
-    top: 165px;
-}
-
-div.add-project-form.year {
-    top: 220px;
-}
-
-div.add-project-background {
-    position: absolute;
-    width: 1064px;
-    height: 265px;
-    left: calc(50% - 1068px/2 + 2px);
-    top: 356px;
-
-}
-
-form.icon-plus-form{
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    left: 10px;
-    top: 6px;
-    border-color: var(--color-primary-first);
-}
-
-div.delete-form {
-    position: absolute;
-    width: 1064px;
-    height: 185px;
-    left: calc(50% - 1064px/2);
-    top: 341px;
-
-
-}
-
-div.text-form {
-    position: absolute;
-    width: 414px;
-    height: 24px;
-    left: 0;
-    top: 0;
-}
-
-div.confirm-pass-form {
-    box-sizing: border-box;
-    position: absolute;
-    width: 414px;
-    height: 68px;
-    left: calc(50% - 414px/2 - 325px);
-    top: 45px;
-    background: var(--background-form-user);
-    border: var(--color-border-grey);
-    border-radius: var(--border-radius-primary);
-}
-
+/* Media files container */
 div.content-form {
     position: absolute;
     width: 150px;
@@ -265,58 +160,54 @@ div.project-form {
     top: 283px;
 }
 
-div.btn-index-type {
-    box-sizing: border-box;
+/* Student name container. Project page */
+div.nimi.project-page {
     position: absolute;
-    width: 110px;
-    height: 28px;
-    font-size: 13px;
-    line-height: 17px;
-    border: 1px solid var(--color-button-typeproject);
-    border-radius: 40px;
-    background: none;
-    display: flex;
-
-}
-
-div.btn-index-type:hover {
-    background-color: var(--color-button-typeproject);
-
-}
-
-div.btn1-index {
-    left: calc(50% - 110px/2 - 241px);
+    width: 336px;
+    height: 27px;
+    left: calc(50% - 336px/2 - 39px);
     top: 0;
+    font-size: var(--font-size-primary);
+    text-align: left;
+    color: var(--color-text);
 }
 
-div.btn2-index {
-    left: calc(50% - 110px/2 - 121px);
-    top: 0;
+/* Group and year container. Project page */
+div.year.project-page {
+    position: absolute;
+    width: 246px;
+    height: 23px;
+    left: calc(50% - 246px/2 - 84px);
+    top: 43px;
+    text-align: left;
+    color: var(--color-text);
 }
 
-div.btn3-index {
-    left: calc(50% - 110px/2);
-    top: 0;
+/* Project name container. Project page */
+div.project.project-page {
+    position: absolute;
+    width: 736px;
+    height: 50px;
+    left: calc(50% - 530px/2 + 58px);
+    top: 96px;
+    font-size: 32px;
+    text-align: left;
+    color: var(--color-text);
+    border: none;
+    white-space: normal;
+    overflow: initial;
+    text-overflow: clip;
 }
 
-div.btn4-index {
-    left: calc(50% - 110px/2 + 120px);
-    top: 0;
+/* Type project container. Project page */
+div.type.project-page {
+    position: relative;
+    width: 246px;
+    height: 29px;
+    left: calc(50% - 246px/2 - 84px);
+    top: 146px;
+    font-size: var(--font-size-second);
+    text-align: left;
+    color: var(--color-text);
+    margin-top: 10px;
 }
-
-div.btn5-index {
-    left: calc(50% - 110px/2 + 240px);
-    top: 0;
-}
-
-div.btn6-index {
-    left: calc(50% - 110px/2 - 60px);
-    top: 38px;
-}
-
-div.btn7-index {
-    left: calc(50% - 110px/2 + 60px);
-    top: 38px;
-}
-
-

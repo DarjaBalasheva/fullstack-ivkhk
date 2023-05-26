@@ -1,28 +1,34 @@
-{% extends "header.html" %}
-{% block content %} 
+{% extends "header.html" %} <!-- Import header.html -->
+
+{% block content %} <!-- Page content-->
     <div class="project-form">
+        <!-- Student name -->
+        <div class="nimi project-page"><h2 class="project-page"><a href="{{ server }}/result?message={{ result.first_name }} {{ result.last_name }}&key=name">{{ result.first_name }} {{ result.last_name }}</a></h2></div>
 
+        <!-- Student group and year -->
+        <div class="year project-page"><h3 class="project-page"><a href="{{ server }}/result?message={{ result.year_ }}&key=year_">{{ result.year_ }}</a>  ·  <a href="{{ server }}/result?message={{ result.group_ }}&key=group_">{{ result.group_ }}</a></h3></div>
 
-        <div class="nimi project-page"><h2 class="project-page"><a href="{{server}}/result?message={{result.first_name}} {{result.last_name}}&key=name">{{result.first_name}} {{result.last_name}}</a></h2></div>
-        <div class="year project-page"><h3 class="project-page"><a href="{{server}}/result?message={{result.year_}}&key=year_">{{result.year_}}</a>  ·  <a href="{{server}}/result?message={{result.group_}}&key=group_">{{result.group_}}</a></h3></div>
+        <!-- Project name -->
+        <div class="project project-page"><h1 class="project-page"><a href="{{ result.pdf_file }}" target="_blank">{{ result.project_name }}</a></h1></div>
 
-        <div class="project project-page"><h1 class="project-page"><a href="{{result.pdf_file}}" target="_blank">{{result.project_name}}</a></h1></div>
-        <div class="type project-page"><h4 class="project-page"><a href="{{server}}/result?message={{result.type_}}&key=type_">{{result.type_}}</a></h4></div>
+        <!-- Type project -->
+        <div class="type project-page"><h4 class="project-page"><a href="{{ server }}/result?message={{ result.type_ }}&key=type_">{{ result.type_ }}</a></h4></div>
 
-
+            <!-- Media files -->
             <div class="content-form project-page">
-                <a class="primary" href="{{result.app_1}}" target="_blank">
-                    <object data="{{result.app_1}}" type="application/octet-stream">
-                        <img class="notloadp primary-content" src="{{result.app_1}}">
+                <!-- First media -->
+                <a class="primary" href="{{ result.app_1 }}" target="_blank">
+                    <object data="{{ result.app_1 }}" type="application/octet-stream">
+                        <img class="notloadp primary-content" src="{{ result.app_1 }}">
                     </object>
                 </a>
 
-
+            <!-- Other media -->
             <div class="second-content">
                 {% for media in medias %}
-                <a class="second" href="{{media}}" target="_blank">
-                    <object data="{{media}}" type="application/octet-stream">
-                        <img class="notloads second-content" src="{{media}}">
+                <a class="second" href="{{ media }}" target="_blank">
+                    <object data="{{ media }}" type="application/octet-stream">
+                        <img class="notloads second-content" src="{{ media }}">
                     </object>
                 </a>
                 {% endfor %}
