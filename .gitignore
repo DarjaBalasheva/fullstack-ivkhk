@@ -7,4 +7,5 @@ backend/.env
 templates/.DS_Store
 static/.DS_Store
 .env
+.cache
 
