@@ -1,11 +1,11 @@
 # Multimedia lõputöö site. Fullstack
+<img src="https://github.com/DarjaBalasheva/fullstack-ivkhk/actions/workflows/my_workflow.yml/badge.svg">
 
 Этот проект был разработан в ракмках учебной практики в IVKHK Kutsehariduskeskus.
 Проект представляет собой сайт для поиска и просмотра выпускных работ студентов направления мультимедиа.
 Также была создана БД mysql для хранения данных и скрипт для автоматической записи инормации о проектах в БД.
 Проект написан на Python.
 
-<img src="https://github.com/DarjaBalasheva/fullstack-ivkhk/actions/workflows/my_workflow.yml/badge.svg">
 ## Содержание
 - [Описание проекта](#описание-проекта)
   - [Backend](#backend)
