@@ -14,5 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag deploy:$(date +%s)
+    - name: Set up Docker Compose
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y docker-compose
+    
+    - name: Build and deploy
+      run: |
+        docker-compose up -d
+    - name: FastAPI start
+      run: uvicorn main:app --reload
