@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Python install
+    - name: Python 3.11 install
       run: apt-get install python3.11 -y
     - name: Git clone
       uses: actions/checkout@v2
