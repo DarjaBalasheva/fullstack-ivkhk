@@ -13,6 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag deploy:$(date +%s)
+    - name: Git clone
+      uses: actions/checkout@v2
+    - name: Set up Docker Compose
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y docker-compose
+    - name: Environments
+      env:
+          ENV_DATA: ${{ secrets.ENV_MARIADB }}
+      run: |
+          echo "$ENV_DATA" > .env
+    - name: Build and deploy
+      run: |
+        docker-compose up -d
+    - name: FastAPI start
+      if: success()
+      run: uvicorn main:app --reload
