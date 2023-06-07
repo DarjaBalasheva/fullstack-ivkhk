@@ -14,12 +14,12 @@ jobs:
 
     steps:
     - name: Git clone
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: Set up Docker Compose
       run: |
         sudo apt-get update
         sudo apt-get install -y docker-compose
-    - name: Enviroments
+    - name: Environments
       env:
           ENV_DATA: ${{ secrets.ENV_MARIADB }}
       run: |
@@ -28,5 +28,5 @@ jobs:
       run: |
         docker-compose up -d
     - name: FastAPI start
-      if: succcess()
+      if: success()
       run: uvicorn main:app --reload
