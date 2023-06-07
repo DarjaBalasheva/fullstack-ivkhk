@@ -24,5 +24,8 @@ RUN pipenv shell
 #Установка линтеров
 RUN pre-commit install
 
+#Создание БД
+CMD ["python", "db_create.py"]
+
 # Запуск приложения FastAPI
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
