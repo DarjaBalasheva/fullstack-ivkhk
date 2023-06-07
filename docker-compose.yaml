@@ -3,6 +3,10 @@ version: '3.1'
 
 services:
 
+  myapp:
+    build: .
+    ports:
+      - '8000:8000'
   db:
     image: mysql
     container_name: mydb
