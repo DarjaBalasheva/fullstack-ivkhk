@@ -27,6 +27,3 @@ jobs:
     - name: Build and deploy
       run: |
         docker-compose up -d
-    - name: FastAPI start
-      if: success()
-      run: uvicorn main:app --reload
