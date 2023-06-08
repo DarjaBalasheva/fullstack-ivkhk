@@ -33,4 +33,4 @@ jobs:
       run: |
         docker-compose up -d -e db_host="localhost"
     - name: GET request
-      run: http://http://127.0.0.1:8000
+      run: http://127.0.0.1:8000
