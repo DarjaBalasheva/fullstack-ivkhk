@@ -15,7 +15,7 @@ COPY . .
 #RUN pipenv install --system --deploy
 
 # Запуск команды pip-sync
-RUN pipenv sync
+RUN pipenv sync --system
 
 # Обновление пакетного менеджера и установка Git
 #RUN apt-get update && apt-get install -y git

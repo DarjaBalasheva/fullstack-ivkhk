@@ -1,4 +1,5 @@
-import db_connect
+from os import environ
+import mysql.connector
 
 
 def convert_data(file_name):
@@ -7,14 +8,14 @@ def convert_data(file_name):
     return binary_data
 
 
-mydb = db_connect.connect()
-# mydb = mysql.connector.connect(
-#   port=3306,
-#   host=environ["db_host"],
-#   user=environ["db_user_login"],
-#   password=environ["db_user_password"],
-#   database=environ["db_name"]
-# )
+# mydb = db_connect.connect()
+mydb = mysql.connector.connect(
+    port=3306,
+    host=environ["db_host"],
+    user=environ["db_user_login"],
+    password=environ["db_user_password"],
+    database=environ["db_name"],
+)
 # docker - compose - f docker - compose.yaml up
 
 mycursor = mydb.cursor()
