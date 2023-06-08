@@ -12,7 +12,7 @@ COPY . .
 
 
 # Установка зависимостей с помощью pipenv
-RUN pipenv install --system --deploy
+#RUN pipenv install --system --deploy
 
 # Запуск команды pip-sync
 RUN pipenv sync
