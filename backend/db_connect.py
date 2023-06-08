@@ -3,7 +3,6 @@ from mysql.connector import Error
 from os import environ
 from dotenv import load_dotenv
 import time
-from multiprocessing import connection
 
 load_dotenv()
 
@@ -18,7 +17,8 @@ def connect():
                 password=environ["db_user_password"],
                 database=environ["db_name"],
             )
-            if connection.is_connected():
+
+            if mydb.is_connected():
                 print("Успешное подключение к базе данных MySQL")
                 return mydb
         except Error as e:
