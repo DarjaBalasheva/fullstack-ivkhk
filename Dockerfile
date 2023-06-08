@@ -12,7 +12,7 @@ COPY . .
 
 
 # Установка зависимостей с помощью pipenv
-#RUN pipenv install --system --deploy
+RUN pipenv install --system --deploy
 
 # Запуск команды pip-sync
 RUN pipenv sync --system
@@ -21,4 +21,4 @@ RUN pipenv sync --system
 #RUN python backend/db_create.py
 
 # Запуск приложения FastAPI
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "backend/main:app", "--host", "0.0.0.0", "--port", "8000"]
