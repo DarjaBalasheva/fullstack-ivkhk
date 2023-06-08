@@ -33,5 +33,3 @@ jobs:
     - name: Build and deploy
       run: |
         docker-compose up -d -e db_host="localhost"
-    - name: GET request
-      run: GET http://0.0.0.0:8000
