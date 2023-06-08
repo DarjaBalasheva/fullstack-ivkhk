@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+    - name: install lwp-request
+      run: sudo apt install libwww-perl
     - name: Git clone
       uses: actions/checkout@v2
     - name: Set up Node.js
@@ -33,4 +34,4 @@ jobs:
       run: |
         docker-compose up -d -e db_host="localhost"
     - name: GET request
-      run: http://127.0.0.1:8000
+      run: GET http://127.0.0.1:8000
