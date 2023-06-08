@@ -18,7 +18,7 @@ COPY . .
 RUN pipenv sync --system
 
 #Создание БД
-RUN python backend/db_create.py
+#RUN python backend/db_create.py
 
 # Запуск приложения FastAPI
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
