@@ -17,9 +17,6 @@ COPY . .
 # Запуск команды pip-sync
 RUN pipenv sync --system
 
-# Обновление пакетного менеджера и установка Git
-#RUN apt-get update && apt-get install -y git
-
 #Создание БД
 RUN python backend/db_create.py
 
