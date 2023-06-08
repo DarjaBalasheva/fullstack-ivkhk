@@ -24,6 +24,8 @@ services:
       # Opens port 3306 on the container
       - '3306'
       # Where our data will be persisted
+    volumes:
+      - ./db_data:/var/lib/mysql
   phpmyadmin:
     depends_on:
       - db
@@ -47,5 +49,5 @@ services:
     ports:
       - '8000:8000'
 volumes:
-  db_data:
+  - ./db_data:
 
