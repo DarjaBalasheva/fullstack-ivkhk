@@ -45,6 +45,8 @@ services:
     volumes:
       - ./public_html:/usr/local/apache2/htdocs/
   myapp:
+    depends_on:
+      - db
     build: .
     ports:
       - '8000:8000'

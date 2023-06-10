@@ -13,6 +13,7 @@ pre-commit = "*"
 marshmallow = "*"
 mysql-connector-python = "*"
 python-dotenv = "*"
+jinja2 = "*"
 
 
 [dev-packages]

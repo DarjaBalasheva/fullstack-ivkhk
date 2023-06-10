@@ -10,6 +10,7 @@ WORKDIR /app
 # Копирование кода приложения
 COPY . .
 
+RUN pipenv lock
 
 # Установка зависимостей с помощью pipenv
 RUN pipenv install --system --deploy
@@ -18,7 +19,7 @@ RUN pipenv install --system --deploy
 RUN pipenv sync --system
 
 #Создание БД
-#RUN python backend/db_create.py
+WORKDIR backend
 
 # Запуск приложения FastAPI
-CMD ["uvicorn", "backend/main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD uvicorn main:app --host 0.0.0.0 --port 8000
