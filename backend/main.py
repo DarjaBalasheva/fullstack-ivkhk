@@ -165,8 +165,9 @@ async def read_items(
                 )
 
     elif key == "top" and not message:
-        sql = f"""SELECT  project_info.project_uuid, project_info.project_name, project_info.year_, project_info.is_best,
-                        type_list.type_, group_list.group_, students.first_name, students.last_name, students.student_uuid
+        sql = f"""SELECT project_info.project_uuid, project_info.project_name,
+        project_info.year_, project_info.is_best,
+        type_list.type_, group_list.group_, students.first_name, students.last_name, students.student_uuid
 
                         FROM project_info
 
