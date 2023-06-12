@@ -82,7 +82,7 @@ pip pipenv install
 Потребуется создать файл .env в каталоге backend проекта и указать следующие переменные:
 ```bash
 # Настройки FastAPI
-domen=your_domen
+domainn=your_domen
 
 # Настройки базы данных MySQL
 db_host=your_host

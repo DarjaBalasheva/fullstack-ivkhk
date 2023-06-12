@@ -3,7 +3,7 @@ version: '3.1'
 
 services:
 
-  db:
+  mydb:
     image: mysql
     container_name: mydb
     # NOTE: use of "mysql_native_password" is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
@@ -23,12 +23,12 @@ services:
     expose:
       # Opens port 3306 on the container
       - '3306'
-      # Where our data will be persisted
+      # Where our data-example will be persisted
     volumes:
       - ./db_data:/var/lib/mysql
   phpmyadmin:
     depends_on:
-      - db
+      - mydb
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
@@ -44,12 +44,22 @@ services:
       - "8080:80"
     volumes:
       - ./public_html:/usr/local/apache2/htdocs/
-  myapp:
+  myapp7:
     depends_on:
-      - db
+      - mydb
     build: .
+    links:
+      - mydb
     ports:
       - '8000:8000'
+    volumes:
+      - ./backend:/app/backend
+      - ./data:/app/data
+    command:
+      - python app/backend/db_create.py
+      - python app/backend/data/script.py
+      - cd app/backend
+      - uvicorn main:app --reload
 volumes:
   db_data:
 

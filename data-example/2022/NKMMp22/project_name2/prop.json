@@ -1,0 +1,15 @@
+{
+"name" : ["Nimi Perekonanimi"],
+"type" : "Graafika",
+"best" : 0,
+
+"types project": [
+    "Animatsioon",
+    "Helindamine",
+    "Graafika",
+    "3D Graafika",
+    "Video",
+    "Veebiarendus",
+    "Fototööd"
+    ]
+}

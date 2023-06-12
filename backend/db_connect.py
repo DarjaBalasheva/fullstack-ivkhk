@@ -23,6 +23,5 @@ def connect():
                 return mydb
         except Error as e:
             print(f"Ошибка подключения к базе данных MySQL: {e}")
-
             # Ждем перед следующей попыткой подключения
             time.sleep(5)
