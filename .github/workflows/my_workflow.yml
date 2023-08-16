@@ -6,7 +6,7 @@ on:
 jobs:
   testing:
     runs-on: macos-latest
-    steps: 
+    steps:
       - name: "Print hello testing"
         run: echo "hello, its testing"
   prod_deployment:

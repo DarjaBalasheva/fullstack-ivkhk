@@ -1,15 +1,15 @@
 @font-face {
     font-family: Verdana; /* Имя шрифта */
     src: url("../fonts/Verdana.ttf") format("truetype"); /* адрес шрифта и тип */
-    font-style: normal; 
+    font-style: normal;
     font-weight: 400;
     }
 
 :root {
      /* фирменные цвета */
-     --color-primary-first: #F15A22; 
+     --color-primary-first: #F15A22;
      --color-primary-second: #1C8550;
-    
+
      /* text */
     --color-text: #343434;
     --color-text-input: black;
