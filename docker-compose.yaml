@@ -45,11 +45,15 @@ services:
     volumes:
       - ./public_html:/usr/local/apache2/htdocs/
   myapp:
+    container_name: fastapi
     depends_on:
       - db
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env.deploy
     ports:
-      - '8000:8000'
+      - 8000:8000
 volumes:
   db_data:
-

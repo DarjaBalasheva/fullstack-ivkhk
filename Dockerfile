@@ -7,18 +7,15 @@ RUN pip install pipenv
 # Установка зависимостей FastAPI
 WORKDIR /app
 
-# Копирование кода приложения
-COPY . .
-
-RUN pipenv lock
+# Копирование Pipfile и Pipfile.lock
+COPY Pipfile Pipfile.lock ./
 
 # Установка зависимостей с помощью pipenv
 RUN pipenv install --system --deploy
 
-# Запуск команды pip-sync
-RUN pipenv sync --system
+# Копирование остального кода приложения
+COPY . .
 
-#Создание БД
 WORKDIR backend
 
 # Запуск приложения FastAPI
