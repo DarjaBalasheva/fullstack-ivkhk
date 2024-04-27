@@ -8,7 +8,7 @@ This project was developed as part of an educational internship at IVKHK Kutseha
   - [Backend](#backend)
   - [Frontend](#frontend)
 - [Requirements](#requirements)
-- [Install to mac os](#install-to-mac-os)
+- [Installing on mac os](#Installing-on-mac-os)
 - [Setting](#setting)
 - [Start](#start-project)
 - [License](#license)
@@ -39,14 +39,14 @@ Virtual Environment are using to transfer secret data
 
 ## Frontend
 Project is having simple UX/UI design, therefore it using CSS and HTML in Frontend with Jinja2Templates.
-## Требования
+## Requirements
 - Git
 - Docker
 - Docker-compose
 - Python
 - Pipenv
 
-## Установка на mac os
+## Installing on mac os
 - [Installing Python](https://www.python.org/downloads/macos/)
 - [Installing Docker](https://www.docker.com/get-started/)
 - Install Git with Homebrew.
