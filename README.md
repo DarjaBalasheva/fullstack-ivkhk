@@ -1,52 +1,44 @@
 # Multimedia lõputöö site. Fullstack
 <img src="https://github.com/DarjaBalasheva/fullstack-ivkhk/actions/workflows/my_workflow.yml/badge.svg">
 
-Этот проект был разработан в ракмках учебной практики в IVKHK Kutsehariduskeskus.
-Проект представляет собой сайт для поиска и просмотра выпускных работ студентов направления мультимедиа.
-Также была создана БД mysql для хранения данных и скрипт для автоматической записи инормации о проектах в БД.
-Проект написан на Python.
+This project was developed as part of an educational internship at IVKHK Kutsehariduskeskus. The project is a website for searching and viewing graduation projects of multimedia students. Additionally, a MySQL database was created to store data, along with a script for automatically recording project information into the database. The project was wrote in Python.
 
 ## Содержание
-- [Описание проекта](#описание-проекта)
+- [Description project](#description-project)
   - [Backend](#backend)
   - [Frontend](#frontend)
-- [Требования](#требования)
-- [Установка на mac os](#установка-на-mac-os)
-- [Настройка](#настройка)
-- [Запуск](#запуск-проекта)
-- [Лицензия](#лицензия)
+- [Requirements](#requirements)
+- [Install to mac os](#install-to-mac-os)
+- [Setting](#setting)
+- [Start](#start-project)
+- [License](#license)
 
-## Описание проекта
+## Description project
 ### Backend
 #### FastAPI:
-В данном проекте была реализована работа с фреймвороком FastAPI для создания веб-страниц.
-Есть основной экземпляр FastAPI приложения app, который подключается к базе данных и монтирует статические файлы и медиафайлы.
-Подключен Jinja2Templates для работы с HTML-шаблонами и монтажа статических файлов.
-Определены маршруты с использованием декораторов @app.get, которые соответствуют различным страницам приложения.
-Определены параметры запроса: маршруты используют параметры запроса, такие как message и key, которые передаются в функции обработчика. Также используются параметры запроса с аргументами по умолчанию, если они не указаны явно.
-Работа базой данных: функции обработчика взаимодействуют с базой данных, выполняя SQL-запросы для извлечения данных. Используется асинхронная версия функции execute для выполнения запросов. Также используется словарь dictionary=True, чтобы получить результаты в виде словарей вместо кортежей.
+This project is using the FastAPI framework. Jinja2Templates is utilizing for working with HTML pages and managing static files.
+Routes is using the `@app.get` decorator, corresponding to different pages of the application. Request parameters: routes are utilizing query parameters such as `message` and `key`, which are passing into the handler functions. Default arguments are also using for query parameters if they are not explicitly specified.
+Database interaction: Handler functions are interacting with the database by executing SQL queries to retrieve data. The asynchronous version of the `execute` function are using to execute queries. Additionally, `dictionary=True` is employed to retrieve results as dictionaries instead of tuples.
 #### Docker:
-Проект использует Docker для контейниризации и развертывания установки mysql и phpmyadmin.
-#### База данных:
-Проект использует базу данных MySQL для хранения и управления данными.
-Был импортирован модуль mysql.connector для работы с базой данных MySQL.
-Создано несколько таблиц для хранения информации и настроены внешние ключи для связи таблиц.
-Созданы уникальные значения для некоторых параметров с целью избежания повторов и должной работы скрипта по атовмматической записи информации в БД.
+Project is using Docker
+#### Data Base:
+Project is using DB MySQL
+For connecting to DB importing mysql.connector.
+Tables are creating for saving information. Primary and foreign keys are using in tables.
+Unique values are creating to avoid dublicates.
 #### phpMyAdmin:
-Установлен phpMyAdmin в докер-контейнере для работы с БД.
+phpMyAdmin installing with Docker for work in DB.
 #### Pipfile:
 Используется для управления зависимостями проекта.
 #### Linters и pre-commit:
-Настроены линтеры black, autoflake, flake8 и pre-commit для анализа и форматирования кода.
+Linters black, autoflake, flake8 и pre-commit are using.
 #### Swagger Configure:
-В проекте настроена документация API с помощью Swagger.
-Хотя фреймфорк FAstAPI автоматически создает документацию проекта, я решила создать свой swagger.yml для изучения принципа работы с ним.
+Swagger are using to API documentation.
 #### Virtual Environment
-Используются переменные окружения для передачи данных при создании БД и подключении к ней.
+Virtual Environment are using to transfer secret data
 
 ## Frontend
-Во фронте были реализованы CSS и HTML с ипользованием шаблонизатора Jinja2Templates для header.
-В данномпроектея хотела глубже ознакомится с возможностями CSS и HTML, поэтому не использовала Java
+Project is having simple UX/UI design, therefore it using CSS and HTML in Frontend with Jinja2Templates.
 ## Требования
 - Git
 - Docker
@@ -55,74 +47,68 @@
 - Pipenv
 
 ## Установка на mac os
-- [Установка Python](https://www.python.org/downloads/macos/)
-- [Установка Docker](https://www.docker.com/get-started/)
-- Установите Git, если он ещё не установлен с помощью Homebrew.
-  - Установка Homebrew
+- [Installing Python](https://www.python.org/downloads/macos/)
+- [Installing Docker](https://www.docker.com/get-started/)
+- Install Git with Homebrew.
+  - Installing Homebrew
     ```bash
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
-  - Установка GIT
+  - Installing GIT
     ```bash
     brew install git
     ```
-- Клонирование репозитория.
+- Cloning repository.
 ```bash
 git clone git@github.com:DarjaBalasheva/fullstack-ivkhk.git
 cd fullstack-ivkhk
 ```
 
-- Установка библиотеки зависимостей
+- Installing pipenv
 ```bash
 pip pipenv install
 ```
-## Настройка
-### Настройка env файла
-Перед запуском проекта необходимо настроить переменные окружения.
-Потребуется создать файл .env в каталоге backend проекта и указать следующие переменные:
+## Setting
+### Setting env file
+Create .env file in backend folder and set passwords:
 ```bash
-# Настройки FastAPI
+# FastAPI
 domen=your_domen
 
-# Настройки базы данных MySQL
+# MySQL
 db_host=your_host
 db_name=your_db_name
 db_user_login=your_user_name
 db_user_password=your_user_password
 
-# Настройки phpMyAdmin
+# phpMyAdmin
 db_root_password=your_root_password
 ```
-Необходимо заменить **your_domen**, **your_host**, **your_db_name**, **your_user_name**, **your_user_password**, **your_root_password** на соответсвующие значения.
+Change **your_domen**, **your_host**, **your_db_name**, **your_user_name**, **your_user_password**, **your_root_password** to your values.
 ### Настройка библиотек зависимостей
-- Установка зависимостей, указанных в **Pipfile**. Эта команда создаст виртуальное окружение и установит все зависимости, указанные в Pipfile, в это окружение.
+- Installing libraries from **Pipfile**. This command are creating virtualenv and are installing all libraries for project.
 ```bash
 pipenv install
 ```
-- Активация виртуального окружение pipenv
+- Activate virtualenv pipenv
 ```bash
 pipenv shell
 ```
-Виртуальное окружение настроено. С помощью pipenv и установлены все зависимости, указанные в Pipfile.
-Вы можете выполнять команды и запускать приложение внутри виртуального окружения.
-После клонирования репозитория и установки зависимостей с помощью **pipenv**, не нужно использовать **pip** для установки или управления зависимостями.
-Вместо этого используйте команды **pipenv install** и **pipenv uninstall** для добавления или удаления зависимостей.
-### Настройка линтеров и pre-commit
+### Setting linters and pre-commit
 ```bash
 pre-commit install
 ```
-## Запуск проекта
-Запустите Docker-контейнеры с помощью docker-compose:
+## Start project
+Run docker-compose:
 ```bash
 docker-compose up -d
 ```
-Запустите FastAPI
+Run FastAPI
 ```bash
 uvicorn main:app --reload
 ```
-После успешного запуска контейнеров вы сможете получить доступ к веб-приложению FastAPI по адресу http://localhost:8000.
 
-Узнать, можно ли в контейнерах запустить композе, установку дб и запуск FastAPI
+Project host: http://localhost:8000.
 
-## Лицензия
-Этот проект лицензирован по лицензии MIT.
+## License
+This priject are using license MIT.
