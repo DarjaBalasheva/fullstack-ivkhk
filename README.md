@@ -1,4 +1,4 @@
-# Multimedia lõputöö site. Fullstack
+# Multimedia website of the thesis. Fullstack
 <img src="https://github.com/DarjaBalasheva/fullstack-ivkhk/actions/workflows/my_workflow.yml/badge.svg">
 
 This project was developed as part of an educational internship at IVKHK Kutsehariduskeskus. The project is a website for searching and viewing graduation projects of multimedia students. Additionally, a MySQL database was created to store data, along with a script for automatically recording project information into the database. The project was wrote in Python.
